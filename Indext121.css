@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+
+.header{
+  background-color:#4B6587 ;
+  background-size: ;
+  min-width: 10em;
+  max-height: 12em;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: center;
+  padding:2.8em;
+}
+
+ul{
+  list-style-type: none;
+  float: right;
+  
+}
+
+ul li{
+ display: inline-block;
+}
+
+
+ul li a{
+  
+  float: right;
+  text-align: right;
+  color:#F0E5CF;
+  font-size: 20px;
+  text-decoration: none;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  transition: 0.6s ease;
+  margin-right: 6px;
+}
+
+ul li a:hover{
+  background-color:#F0E5CF;
+  color:#fff;
+}
+
+.tesla-img{
+  width: 7.5em;
+  height: 7.5em;
+  float: left;
+  margin: auto;
+  
+  
+}
+
+.bg{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFEFE0;
+}
+
+.box{
+  background:#FED9CA;
+  height: 70%;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+
+#heading{
+  color: #7D7D7D;
+  padding-top: 2em;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Montserrat;
+}
+
+.input-details{
+  padding-top: 4em;
+  display:flex;
+  justify-content: center;
+}
+
+input{
+  width:80% ;
+  float:right ;
+  border: 1.5px solid #aaa;
+  border-radius: 4px;
+  margin: 5px 0;
+  outline: none;
+  padding: 18px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+input:focus{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+
+  
+}
+
+.form-button{
+width:250px;
+height:45px;
+border:none;
+outline:none;
+box-shadow:0 3px 2px 0 #2c80a2;
+color:#fff;
+font-size:22px;
+font-family: Roboto;
+text-shadow:0 1px rgba(0,0,0,0.4);
+background-color:#3fb8e8;
+font-weight:700;
+
+background-repeat:no-repeat;
+background-position:200px
+margin-top: 10px;
+padding: 2px;
+}
+.form-button:hover{
+background-color:#1baae3;
+cursor:pointer
+}
+.form-button:active{
+padding-top:2px;
+box-shadow:none
+}
+
+p{
+  color: #FF5349;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Montserrat;
+  padding-top:3.5em;
+}
+
+.footer{
+ background-color:#4B6587 ;
+  background-size: cover;
+  min-width: 10em;
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  
+}
+.footer-end{
+  font-size: 20px;
+  font-family: Montserrat;
+  text-decoration: none;
+  color:#FFEFE0;
+  text-align: center;
+  padding: 30px 0 20px;
+  margin: 30px;
+}

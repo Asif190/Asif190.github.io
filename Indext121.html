@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>Result Showoff</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Indext121.css">
+
+
+  </head>
+  
+  <body>
+  <div class="header">
+     
+     <img class="tesla-img" src="tesla.webp">
+     <nav class="nav-bar">
+     <ul>
+       <li><a href="#" >HOME</a></li>
+       <li><a href="#" >ABOUT</a></li>
+       <li><a href="#" >Signup</a></li> 
+     </ul>
+     </nav>
+   </div>
+ 
+    <div class="bg">
+      <div class="box">
+        <div class="row">
+          <div class="col-6">
+          <div class="container">
+           <h2 id="heading">Students result checkup</h2>
+          </div>
+          </div>
+          <div class="col-6">
+            <div class="container">
+              <div class="input-details">
+                <input type="text" id="Marks" class="form-control" placeholder="put your marks here">
+              </div>
+            </div>
+            <div class="btn">
+              <input class="form-button" type="button" name="" value="Submit" onclick="calcy()">
+            </div>
+          </div>
+        </div>
+        <div class="container show data">
+          <p id="show data"></p>
+        </div>
+      </div>
+    </div>
+   <div class="footer">
+      <p class="footer-end">©Crafted and designed by Asif Hasan ❤️</p>
+      
+    </div>
+   <script>
+     const calcy = () =>{
+       let Marks=document.getElementById('Marks').value;
+       let grades='';
+       console.log(Marks);
+       
+       if (Marks<=100 && Marks>=80) {
+         grades='A+';
+         
+       }else if (Marks<=79 && Marks>=60) {
+         grades='A';
+       }else if (Marks<=59 && Marks>=50) {
+         grades='B';
+       }else if (Marks<=49 && Marks>=40) {
+         grades='C';
+       }else{
+         grades='F';
+       }
+       
+       
+        if (Marks>=40) {
+         document.getElementById('show data').innerHTML=`Congratulations you are passed <br> Your grade is ${grades}.`
+         
+       }else {
+     document.getElementById('show data').innerHTML=`Sorry you are failed <br> Your grade is ${grades}.`
+       }
+      
+     
+     }
+   </script>
+  </body>
+  </html>
