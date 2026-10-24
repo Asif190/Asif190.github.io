@@ -1,0 +1,73 @@
+---
+title: Curriculum vitae
+lede: Education, research experience, awards and service. The full CV is available as a PDF.
+body_class: wide-page cv-page
+---
+{% assign cv = site.data.cv %}
+<p class="cv-download"><a class="btn btn-light" href="{{ site.author.cv_pdf | relative_url }}">{% include icon.html name="download" %}Download CV (PDF)</a><a class="btn btn-light" href="{{ '/publications/' | relative_url }}">{% include icon.html name="file" %}Publications</a></p>
+
+<h2>Education</h2>
+<ul class="entries">
+{% for e in cv.education %}
+  <li><div class="entry-head"><strong>{{ e.degree }}</strong><span>{{ e.dates }}</span></div>
+  <p>{{ e.school }}, {{ e.place }}</p>{% if e.detail != "" %}<p class="detail">{{ e.detail }}</p>{% endif %}</li>
+{% endfor %}
+</ul>
+
+<h2>Research experience</h2>
+<ul class="entries">
+{% for e in cv.research_experience %}
+  <li><div class="entry-head"><strong>{{ e.role }}</strong><span>{{ e.dates }}</span></div>
+  <p>{{ e.org }}</p><p class="detail">{{ e.detail }}</p></li>
+{% endfor %}
+</ul>
+
+<h2>Publications</h2>
+<p>
+  {% assign n_conf = site.data.publications | where: "type", "conference" | size %}
+  {% assign n_pre = site.data.publications | where: "type", "preprint" | size %}
+  {{ n_conf }} peer-reviewed conference papers and {{ n_pre }} preprint. <a href="{{ '/publications/' | relative_url }}">Full list with links and BibTeX</a>.
+</p>
+
+<h2>Professional experience</h2>
+<ul class="entries">
+{% for e in cv.experience %}
+  <li><div class="entry-head"><strong>{{ e.role }}</strong><span>{{ e.dates }}</span></div>
+  <p>{{ e.org }}</p><p class="detail">{{ e.detail }}</p></li>
+{% endfor %}
+</ul>
+
+<h2>Honours and awards</h2>
+<ul class="entries">
+{% for e in cv.awards %}
+  <li><div class="entry-head"><strong>{{ e.title }}</strong><span>{{ e.year }}</span></div>
+  <p>{{ e.where }}</p>{% if e.detail != "" %}<p class="detail">{{ e.detail }}</p>{% endif %}</li>
+{% endfor %}
+</ul>
+
+<h2>Teaching and outreach</h2>
+<ul class="entries">
+{% for e in cv.teaching %}
+  <li><div class="entry-head"><strong>{{ e.title }}</strong><span>{{ e.date }}</span></div><p>{{ e.detail }}</p></li>
+{% endfor %}
+</ul>
+
+<h2>Leadership and service</h2>
+<ul class="entries">
+{% for e in cv.service %}
+  <li><div class="entry-head"><strong>{{ e.role }}</strong><span>{{ e.dates }}</span></div><p>{{ e.org }}</p></li>
+{% endfor %}
+</ul>
+
+<h2>Technical skills</h2>
+<dl class="skills">
+{% for s in cv.skills %}<dt>{{ s.group }}</dt><dd>{{ s.items }}</dd>{% endfor %}
+</dl>
+
+<h2>Relevant coursework</h2>
+<p>{{ cv.coursework | join: ", " }}.</p>
+
+<h2>References</h2>
+<p>Prof. Lutfa Akter, Department of EEE, BUET (thesis supervisor)<br>
+Prof. Shaikh Anowarul Fattah, Department of EEE, BUET (research advisor)<br>
+Contact details available on request.</p>

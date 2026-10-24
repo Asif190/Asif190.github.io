@@ -1,0 +1,111 @@
+# Publications — the Publications page and home page are built from this file.
+# Fields:
+#   type: conference | journal | preprint | review   (review = under review / in preparation)
+#   selected: true → also shown on the home page
+#   links: any of pdf, arxiv, doi, ieee, code, slides, poster (leave out the ones you don't have)
+#   abbr: short venue badge, e.g. "MICCAI"
+#   bibtex: optional; shows a "BibTeX" toggle
+# Your name is bolded automatically wherever "M. A. Hasan" appears.
+
+- key: hasan2026usseg
+  abbr: "In prep."        # short badge shown next to the entry
+  type: review
+  title: "A Boundary-Aware Hybrid Attention Framework for Breast Ultrasound Lesion Segmentation"
+  authors: "M. A. Hasan, et al."
+  venue: "Journal manuscript in preparation"
+  year: 2026
+  note: "Extends Part II of the undergraduate thesis: residual encoding, windowed self-attention and a boundary-aware loss, evaluated across BUSI, UDIAT and BUS-BRA."
+  links: {}
+
+- key: hasan2025gmmhmrf
+  abbr: "ICCIT"        # short badge shown next to the entry
+  type: conference
+  selected: true
+  title: "Real-time Breast Cancer Classification Employing GMM-HMRF Segmentation and PCA-Optimized Machine Learning Algorithms"
+  authors: "M. A. Hasan, N. Ahmed, and M. Ahmed"
+  venue: "28th International Conference on Computer and Information Technology (ICCIT)"
+  location: "Cox's Bazar, Bangladesh"
+  year: 2025
+  links:
+    ieee: ""          # paste the IEEE Xplore URL here
+    code: ""          # repository URL
+  bibtex: |
+    @inproceedings{hasan2025gmmhmrf,
+      title     = {Real-time Breast Cancer Classification Employing {GMM-HMRF} Segmentation and {PCA}-Optimized Machine Learning Algorithms},
+      author    = {Hasan, Mohammad Asif and Ahmed, N. and Ahmed, M.},
+      booktitle = {2025 28th International Conference on Computer and Information Technology (ICCIT)},
+      address   = {Cox's Bazar, Bangladesh},
+      year      = {2025},
+      publisher = {IEEE}
+    }
+
+- key: sarkar2025egdyolo
+  abbr: "arXiv"        # short badge shown next to the entry
+  type: preprint
+  selected: true
+  title: "EGD-YOLO: A Lightweight Multimodal Framework for Robust Drone-Bird Discrimination via Ghost-Enhanced YOLOv8n and EMA Attention under Adverse Condition"
+  authors: "S. Sarkar, M. A. Hasan, K. A. Shahriar, F. Labiba, N. Tasnim, and S. A. Fattah"
+  venue: "arXiv preprint arXiv:2510.10765"
+  year: 2025
+  links:
+    arxiv: "https://arxiv.org/abs/2510.10765"
+    pdf: "https://arxiv.org/pdf/2510.10765"
+  bibtex: |
+    @article{sarkar2025egdyolo,
+      title   = {{EGD-YOLO}: A Lightweight Multimodal Framework for Robust Drone-Bird Discrimination via Ghost-Enhanced {YOLOv8n} and {EMA} Attention under Adverse Condition},
+      author  = {Sarkar, S. and Hasan, Mohammad Asif and Shahriar, K. A. and Labiba, F. and Tasnim, N. and Fattah, Shaikh Anowarul},
+      journal = {arXiv preprint arXiv:2510.10765},
+      year    = {2025}
+    }
+
+- key: labiba2025tracking
+  abbr: "WIECON-ECE"        # short badge shown next to the entry
+  type: conference
+  selected: true
+  title: "Real-Time Multi-Modal Drone and Bird Tracking Using Modality-Aware Adaptation and Physics-Aware Filtering"
+  authors: "F. Labiba, M. A. Hasan, S. Sarkar, A. Shahriar, N. Tasnim, and S. A. Fattah"
+  venue: "IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering (WIECON-ECE)"
+  location: "Cox's Bazar, Bangladesh"
+  year: 2025
+  links:
+    ieee: ""
+  bibtex: |
+    @inproceedings{labiba2025tracking,
+      title     = {Real-Time Multi-Modal Drone and Bird Tracking Using Modality-Aware Adaptation and Physics-Aware Filtering},
+      author    = {Labiba, F. and Hasan, Mohammad Asif and Sarkar, S. and Shahriar, A. and Tasnim, N. and Fattah, Shaikh Anowarul},
+      booktitle = {2025 IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering (WIECON-ECE)},
+      address   = {Cox's Bazar, Bangladesh},
+      year      = {2025},
+      publisher = {IEEE}
+    }
+
+- key: hasan2025magbert
+  abbr: "ICCIT"        # short badge shown next to the entry
+  type: conference
+  title: "Multimodal Pipeline for Sentiment Mining via MAG-BERT, LoRA-T5 Generated Suggestions with SHAP Explanations for Curriculum Optimization"
+  authors: "M. A. Hasan, M. S. Hasan, A. Hamim, N. Ahmed, S. Imam, and T. Ahmed"
+  venue: "28th International Conference on Computer and Information Technology (ICCIT)"
+  location: "Cox's Bazar, Bangladesh"
+  year: 2025
+  links:
+    ieee: ""
+    code: ""          # repository URL
+  bibtex: |
+    @inproceedings{hasan2025magbert,
+      title     = {Multimodal Pipeline for Sentiment Mining via {MAG-BERT}, {LoRA-T5} Generated Suggestions with {SHAP} Explanations for Curriculum Optimization},
+      author    = {Hasan, Mohammad Asif and Hasan, M. S. and Hamim, A. and Ahmed, N. and Imam, S. and Ahmed, T.},
+      booktitle = {2025 28th International Conference on Computer and Information Technology (ICCIT)},
+      address   = {Cox's Bazar, Bangladesh},
+      year      = {2025},
+      publisher = {IEEE}
+    }
+
+- key: asaduzzaman2025cps
+  abbr: "ICCT"        # short badge shown next to the entry
+  type: conference
+  title: "An Improved Optimization Approach for Secure User Authentication in Cyber Physical Systems"
+  authors: "A. S. M. Asaduzzaman, M. M. Hasan, M. K. Jahan, M. A. A. Chowdhury, M. A. Hasan, and M. Arman"
+  venue: "International Conference on Computing Technologies"
+  location: "Bengaluru, India"
+  year: 2025
+  links: {}

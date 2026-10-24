@@ -1,0 +1,24 @@
+---
+title: Blog
+lede: Notes on papers, methods and things I am learning in medical imaging and computer vision.
+body_class: wide-page
+---
+{% if site.posts.size == 0 %}
+<p>No posts yet.</p>
+{% else %}
+{% assign by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for y in by_year %}
+<h2 class="year-head">{{ y.name }}</h2>
+<div class="post-cards">
+  {% for post in y.items %}
+  <a class="post-card" href="{{ post.url | relative_url }}">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%-d %B %Y' }}</time>
+    <h3>{{ post.title }}</h3>
+    <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 30 }}{% endif %}</p>
+    {% if post.tags.size > 0 %}<ul class="tags">{% for t in post.tags %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% endfor %}
+<p class="more"><a href="{{ '/blog/feed.xml' | relative_url }}">{% include icon.html name="rss" %}Subscribe via RSS</a></p>
+{% endif %}

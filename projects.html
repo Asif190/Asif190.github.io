@@ -1,0 +1,23 @@
+---
+title: Projects
+lede: Systems and experiments beyond the thesis — from swarm drones to quantum classifiers.
+body_class: wide-page
+---
+<div class="project-grid">
+{% for p in site.data.projects %}
+<article class="project-card{% if p.featured %} featured{% endif %}">
+  <div class="project-top">
+    {% include glyph.html name=p.glyph %}
+    <p class="project-area">{{ p.area }}{% if p.year != "" %}, {{ p.year }}{% endif %}</p>
+  </div>
+  <h2>{{ p.title }}</h2>
+  <p>{{ p.summary }}</p>
+  {% if p.metrics.size > 0 %}
+  <ul class="metrics">{% for m in p.metrics %}<li>{{ m }}</li>{% endfor %}</ul>
+  {% endif %}
+  <ul class="tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+  <p class="pub-links">{% for l in p.links %}{% if l[1] != "" %}<a href="{{ l[1] }}">{{ l[0] | capitalize }}</a>{% endif %}{% endfor %}</p>
+</article>
+{% endfor %}
+</div>
+<p class="more">More code is on <a href="https://github.com/{{ site.author.github }}">GitHub</a> and notebooks on <a href="https://www.kaggle.com/{{ site.author.kaggle }}">Kaggle</a>.</p>

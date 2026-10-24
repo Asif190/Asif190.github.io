@@ -1,0 +1,13 @@
+# Newest first. The home page shows the first 6. Markdown links are allowed in "text".
+- date: 2026-10
+  text: "Preparing a journal manuscript on boundary-aware breast ultrasound lesion segmentation, extending my undergraduate thesis."
+- date: 2026-07
+  text: "Graduated with a B.Sc. in Electrical and Electronic Engineering from BUET."
+- date: 2026-06
+  text: "Defended my undergraduate thesis on clinically interpretable breast cancer imaging, supervised by Prof. Lutfa Akter."
+- date: 2025-12
+  text: "Two papers presented at ICCIT 2025 and one at IEEE WIECON-ECE 2025, Cox's Bazar."
+- date: 2025-10
+  text: "EGD-YOLO preprint released on [arXiv](https://arxiv.org/abs/2510.10765)."
+- date: 2025-09
+  text: "Our team placed Second Runner-Up at the IEEE VIP Cup 2025, held with ICIP 2025, and received an ICIP travel grant."

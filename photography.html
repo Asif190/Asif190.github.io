@@ -1,0 +1,26 @@
+---
+title: Photography
+lede: Photographs I have taken away from the lab. Click any image to view it full size.
+body_class: photos-page
+---
+<ul class="gallery">
+  {% for ph in site.data.photos %}
+  {% capture src %}/assets/photos/{{ ph.file }}{% endcapture %}
+  <li>
+    <button type="button" class="photo" data-full="{{ src | relative_url }}" data-caption="{{ ph.title }}, {{ ph.place }}, {{ ph.year }}">
+      <img src="{{ src | relative_url }}" alt="{{ ph.alt }}" loading="lazy">
+      <span class="caption-overlay">{{ ph.title }}<span>{{ ph.place }}, {{ ph.year }}</span></span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+  <img alt="">
+  <p class="lb-caption"></p>
+  <div class="lb-controls">
+    <button type="button" class="lb-prev">Previous</button>
+    <button type="button" class="lb-close">Close</button>
+    <button type="button" class="lb-next">Next</button>
+  </div>
+</dialog>
