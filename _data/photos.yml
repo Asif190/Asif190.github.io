@@ -1,0 +1,34 @@
+# Photography page. Put image files in assets/photos/ and list them here.
+# Keep each image under ~500 KB (long edge ~1800 px) so the page loads quickly.
+# "title" and "place" are shown in the caption; "alt" describes the image for screen readers.
+
+- file: placeholder-1.svg
+  title: "Replace with your photo"
+  place: "Chattogram"
+  year: 2026
+  alt: "Placeholder image"
+- file: placeholder-2.svg
+  title: "Replace with your photo"
+  place: "Dhaka"
+  year: 2026
+  alt: "Placeholder image"
+- file: placeholder-3.svg
+  title: "Replace with your photo"
+  place: "Cox's Bazar"
+  year: 2025
+  alt: "Placeholder image"
+- file: placeholder-4.svg
+  title: "Replace with your photo"
+  place: "Sylhet"
+  year: 2025
+  alt: "Placeholder image"
+- file: placeholder-5.svg
+  title: "Replace with your photo"
+  place: "BUET campus"
+  year: 2025
+  alt: "Placeholder image"
+- file: placeholder-6.svg
+  title: "Replace with your photo"
+  place: "Alaska, USA"
+  year: 2025
+  alt: "Placeholder image"

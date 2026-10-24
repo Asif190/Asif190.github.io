@@ -1,0 +1,10 @@
+{% assign a = site.author %}
+<ul class="profile-links{% if include.class %} {{ include.class }}{% endif %}">
+  {% if a.email != "" %}<li><a href="mailto:{{ a.email }}">{% include icon.html name="email" %}<span>Email</span></a></li>{% endif %}
+  {% if a.google_scholar != "" %}<li><a href="https://scholar.google.com/citations?user={{ a.google_scholar }}">{% include icon.html name="scholar" %}<span>Scholar</span></a></li>{% endif %}
+  {% if a.orcid != "" %}<li><a href="https://orcid.org/{{ a.orcid }}">{% include icon.html name="orcid" %}<span>ORCID</span></a></li>{% endif %}
+  {% if a.github != "" %}<li><a href="https://github.com/{{ a.github }}">{% include icon.html name="github" %}<span>GitHub</span></a></li>{% endif %}
+  {% if a.linkedin != "" %}<li><a href="https://www.linkedin.com/in/{{ a.linkedin }}">{% include icon.html name="linkedin" %}<span>LinkedIn</span></a></li>{% endif %}
+  {% if a.kaggle != "" %}<li><a href="https://www.kaggle.com/{{ a.kaggle }}">{% include icon.html name="kaggle" %}<span>Kaggle</span></a></li>{% endif %}
+  {% if a.researchgate != "" %}<li><a href="https://www.researchgate.net/profile/{{ a.researchgate }}">{% include icon.html name="researchgate" %}<span>ResearchGate</span></a></li>{% endif %}
+</ul>

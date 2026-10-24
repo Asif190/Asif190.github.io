@@ -1,0 +1,30 @@
+{% assign p = include.pub %}
+{% assign me = '<strong class="me">M. A. Hasan</strong>' %}
+<li class="pub pub-{{ p.type }}" id="{{ p.key }}">
+  <div class="pub-badge">
+    <span class="abbr">{{ p.abbr | default: p.type }}</span>
+    <span class="pub-year">{{ p.year }}</span>
+  </div>
+  <div class="pub-body">
+    <p class="pub-title">{{ p.title }}</p>
+    <p class="pub-authors">{{ p.authors | replace: 'M. A. Hasan', me }}</p>
+    <p class="pub-venue"><em>{{ p.venue }}</em>{% if p.location %}, {{ p.location }}{% endif %}{% if p.type != "review" %}, {{ p.year }}{% endif %}.</p>
+    {% if p.note %}<p class="pub-note">{{ p.note }}</p>{% endif %}
+    <p class="pub-links">
+      {% if p.links.pdf and p.links.pdf != "" %}<a href="{{ p.links.pdf }}">PDF</a>{% endif %}
+      {% if p.links.arxiv and p.links.arxiv != "" %}<a href="{{ p.links.arxiv }}">arXiv</a>{% endif %}
+      {% if p.links.ieee and p.links.ieee != "" %}<a href="{{ p.links.ieee }}">IEEE Xplore</a>{% endif %}
+      {% if p.links.doi and p.links.doi != "" %}<a href="https://doi.org/{{ p.links.doi }}">DOI</a>{% endif %}
+      {% if p.links.code and p.links.code != "" %}<a href="{{ p.links.code }}">Code</a>{% endif %}
+      {% if p.links.slides and p.links.slides != "" %}<a href="{{ p.links.slides }}">Slides</a>{% endif %}
+      {% if p.links.poster and p.links.poster != "" %}<a href="{{ p.links.poster }}">Poster</a>{% endif %}
+      {% if p.bibtex %}<button type="button" class="bib-toggle" aria-expanded="false" aria-controls="bib-{{ p.key }}">BibTeX</button>{% endif %}
+    </p>
+    {% if p.bibtex %}
+    <div class="bib" id="bib-{{ p.key }}" hidden>
+      <pre><code>{{ p.bibtex | strip | xml_escape }}</code></pre>
+      <button type="button" class="bib-copy" data-target="bib-{{ p.key }}">Copy</button>
+    </div>
+    {% endif %}
+  </div>
+</li>

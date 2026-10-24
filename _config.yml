@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------
+# Site settings — edit these first.
+# After changing this file, GitHub rebuilds the site automatically.
+# ---------------------------------------------------------------
+title: Mohammad Asif Hasan
+description: >-
+  Researcher in medical image analysis and efficient computer vision.
+  B.Sc. in Electrical and Electronic Engineering, BUET.
+url: "https://asif190.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Mohammad Asif Hasan
+  short_name: Asif Hasan
+  degree: B.Sc. in Electrical and Electronic Engineering
+  institution: Bangladesh University of Engineering and Technology (BUET)
+  location: Chattogram, Bangladesh
+  email: asif78h78@gmail.com
+  photo: /assets/img/profile.jpg
+  cv_pdf: /assets/files/CV_Mohammad_Asif_Hasan.pdf
+  # Leave a field empty ("") to hide its link.
+  github: Asif190
+  linkedin: mohammad-asif-hasan-001b36212
+  kaggle: mohammadasifhasan
+  google_scholar: ""                  # e.g. "abcdEFgAAAAJ"
+  orcid: ""                           # e.g. "0000-0000-0000-0000"
+  researchgate: ""
+  arxiv_query: "Hasan_M_A"
+
+# Shown as a line under your name on the home page. Set to "" to hide.
+availability: "Seeking Ph.D. positions in ECE / CS beginning Fall 2027."
+
+# Footer text
+last_updated: "October 2026"
+
+# Blog
+permalink: /blog/:year/:title/
+excerpt_separator: "<!--more-->"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: blog/feed.xml
+
+# Image used when the site is shared on LinkedIn, Slack, email previews, etc.
+logo: /assets/img/profile-square.jpg
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: page, image: /assets/img/profile-square.jpg }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

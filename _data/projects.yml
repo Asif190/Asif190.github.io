@@ -1,0 +1,72 @@
+# Projects page. "area" groups the projects; "metrics" are short result strings.
+# Links you leave empty are hidden. "featured: true" makes the card span the full width.
+
+- title: "HIVE-R: Bio-inspired swarm UAV system for human detection in GPS-denied rescue environments"
+  area: Edge vision and robotics
+  glyph: drone          # drone | lesion | fusion | qubit | chip | text
+  featured: true
+  year: ""          # add the year
+  summary: >-
+    A "Queen-Worker" multi-UAV framework for search and rescue where GPS is unavailable.
+    I optimised and deployed a 6.2 MB YOLOv8n detector on a Raspberry Pi 4, and the team fused
+    monocular visual odometry with IMU data through an extended Kalman filter for 6-DoF navigation.
+    Detections are geolocated and relayed to the ground station over a 915 MHz MAVLink link.
+  metrics: ["86.9% mAP under smoke and dust", "185 ms on-device inference", "< 500 ms end-to-end telemetry latency"]
+  tags: [YOLOv8n, Raspberry Pi 4, EKF, Visual odometry, MAVLink]
+  links: { code: "", demo: "" }
+
+- title: "Adaptive multimodal sentiment analysis and feedback summarisation"
+  area: Multimodal learning and NLP
+  glyph: text          # drone | lesion | fusion | qubit | chip | text
+  year: ""          # add the year
+  summary: >-
+    An end-to-end pipeline for analysing course feedback: MAG-BERT for cross-modal fusion,
+    LoRA-fine-tuned T5 for parameter-efficient summarisation and suggestion generation,
+    and SHAP for explaining which inputs drive each prediction. Published at ICCIT 2025.
+  metrics: ["LoRA reduces trainable parameters while keeping generation quality"]
+  tags: [MAG-BERT, LoRA, T5, SHAP, PyTorch]
+  links: { code: "", paper: "" }
+
+- title: "Breast cancer detection with GMM-HMRF segmentation and PCA-optimised classifiers"
+  area: Medical image analysis
+  glyph: lesion          # drone | lesion | fusion | qubit | chip | text
+  year: ""          # add the year
+  summary: >-
+    A MATLAB pipeline that segments mammograms with a Gaussian mixture model regularised by a
+    hidden Markov random field, then classifies regions with PCA-reduced machine learning models
+    for real-time screening support. Published at ICCIT 2025.
+  metrics: []
+  tags: [MATLAB, GMM, HMRF, PCA]
+  links: { code: "" }
+
+- title: "Variational quantum classifier for Iris classification"
+  area: Quantum machine learning
+  glyph: qubit          # drone | lesion | fusion | qubit | chip | text
+  year: ""          # add the year
+  summary: >-
+    A NISQ-oriented variational quantum classifier in Qiskit 1.0+, comparing TwoLocal and EfficientSU2
+    ansätze optimised with COBYLA, and stress-tested under simulated depolarising and readout noise.
+  metrics: ["65–80% test accuracy on a noisy simulator"]
+  tags: [Qiskit, VQC, NISQ, COBYLA]
+  links: { code: "" }
+
+- title: "Quantum simulation of a particle in a box"
+  area: Quantum machine learning
+  glyph: qubit          # drone | lesion | fusion | qubit | chip | text
+  year: ""          # add the year
+  summary: >-
+    Finite-difference solution of the time-independent Schrödinger equation: building the Hamiltonian
+    matrix, solving for eigenvalues and eigenvectors, and visualising quantised energy levels and wavefunctions.
+  metrics: []
+  tags: [MATLAB, Numerical methods]
+  links: { code: "" }
+
+- title: "Automatic vending machine with IC-based digital logic"
+  area: Digital systems
+  glyph: chip          # drone | lesion | fusion | qubit | chip | text
+  year: ""          # add the year
+  summary: >-
+    A finite-state-machine billing system built entirely from combinational and sequential logic ICs.
+  metrics: []
+  tags: [FSM, Digital logic]
+  links: { demo: "" }
