@@ -1,11 +1,12 @@
 # Content for the CV page. Edit freely; order is preserved.
+# Optional "link" fields add a link after the entry; leave them out to hide.
 
 education:
   - degree: "B.Sc. in Electrical and Electronic Engineering"
     school: "Bangladesh University of Engineering and Technology (BUET)"
     place: "Dhaka, Bangladesh"
     dates: "Jan 2022 – Jul 2026"
-    detail: "CGPA 3.19 / 4.00. Thesis: Toward Clinically Interpretable Breast Cancer Imaging (supervisor: Prof. Lutfa Akter)."
+    detail: "Thesis: Toward Clinically Interpretable Breast Cancer Imaging, joint with Md Nazmus Sakib Tushar (supervisor: Prof. Lutfa Akter)."
   - degree: "Higher Secondary Certificate, Science"
     school: "Notre Dame College"
     place: "Dhaka, Bangladesh"
@@ -18,41 +19,45 @@ education:
     detail: "GPA 5.00 / 5.00"
 
 research_experience:
+  - role: "Research collaborator"
+    org: "Dept. of EEE, BUET — with S. Sarkar and colleagues"
+    dates: "2026 – present"
+    detail: "Two manuscripts in preparation: temporal distribution shift in multimodal Bangla political meme detection, and weighted ensemble fusion of RGB and thermal detectors for small-object drone–bird detection."
   - role: "Undergraduate thesis researcher"
-    org: "Dept. of EEE, BUET — advised by Prof. Lutfa Akter"
+    org: "Dept. of EEE, BUET — supervised by Prof. Lutfa Akter"
     dates: "Jan 2026 – Jun 2026"
-    detail: "Breast ultrasound segmentation, pectoral muscle removal and multimodal BI-RADS classification."
+    detail: "Joint thesis with Md Nazmus Sakib Tushar: lesion-preserving pectoral muscle removal in mammograms, boundary-aware breast ultrasound segmentation, and multimodal BI-RADS classification. A journal manuscript on the ultrasound work is in preparation."
   - role: "Undergraduate researcher"
     org: "Dept. of EEE, BUET — group of Prof. Shaikh Anowarul Fattah"
     dates: "2025"
-    detail: "Multimodal RGB–IR drone and bird detection and tracking (EGD-YOLO; WIECON-ECE 2025). Built the Ghost/EMA modules and RGB–IR data pipeline, ran experiments and ablations, and co-wrote both papers."
+    detail: "Multimodal RGB–IR drone and bird detection and tracking for the IEEE VIP Cup 2025 (EGD-YOLO, arXiv; tracking paper at IEEE WIECON-ECE 2025). Built the Ghost/EMA modules and the RGB–IR data pipeline, ran experiments and ablations, and co-wrote both papers."
 
 experience:
   - role: "AI System Development Engineer"
     org: "BRIM AI, Dhaka"
-    dates: "2026"
-    detail: "Built an AI agent for room security surveillance with real-time computer vision threat detection, and deployed the model in a mobile application with optimised on-device inference."
+    dates: "May 2026 – Sep 2026"
+    detail: "Developed a computer-vision agent for room security surveillance with real-time threat detection, optimised the model for on-device inference and deployed it in a mobile application."
   - role: "Industrial attachment"
     org: "Bangladesh Data Center Company Ltd., National Data Center, Gazipur"
     dates: "Nov 2025"
     detail: "Studied the operation of a Tier IV data centre: power infrastructure, cooling, fibre backbone, cloud provisioning, NOC/SOC operations and layered physical and cyber security."
 
 awards:
-  - title: "Second Runner-Up, IEEE Video and Image Processing (VIP) Cup 2025"
-    where: "IEEE ICIP 2025"
+  - title: "Second Runner-Up (third place), IEEE SPS Video and Image Processing (VIP) Cup 2025"
+    where: "Final held at IEEE ICIP 2025, Anchorage, Alaska, USA"
     year: 2025
-    detail: "Multimodal RGB–IR drone and payload detection with a custom YOLOv8 architecture; selected through two stages from 80+ teams worldwide."
+    detail: "Team EyeQ, BUET. Challenge: infrared–visual fusion for drone detection, tracking and payload identification. I built the team's custom YOLOv8 detector and the drone-payload recognition model."
   - title: "ICIP 2025 Travel Grant"
     where: "IEEE Signal Processing Society"
     year: 2025
-    detail: "Awarded to attend ICIP 2025 as a VIP Cup finalist."
+    detail: "Awarded for the IEEE VIP Cup 2025 final."
   - title: "Finalist, Datathon"
     where: "CUET CSE Fest 2025"
     year: 2025
-    detail: "PaddleOCR-based pipeline for classifying memes as political or non-political."
-  - title: "Top 5, NNO Content Writing Hunt"
+    detail: "Team Breakpoint. PaddleOCR-based pipeline for classifying memes as political or non-political."
+  - title: "Top 30, NNO Content Writing Hunt Programme"
     where: "Newspaper Olympiad"
-    year: ""
+    year: 2021
     detail: ""
   - title: "2nd Position, Divisional Science Fair"
     where: "Chattogram Division"
@@ -60,7 +65,7 @@ awards:
     detail: ""
 
 service:
-  - role: "Vice President"
+  - role: "Vice President, 10th Executive Committee"
     org: "BUET Robotics Society"
     dates: "Mar 2025 – Jul 2026"
   - role: "Webmaster"
@@ -75,23 +80,22 @@ service:
 
 teaching:
   - title: "Introduction to Robotics and Arduino Programming"
-    detail: "Workshop session for undergraduate students, BUET"
+    detail: "Workshop session for undergraduate students, BUET Robotics Society"
     date: "Jan 2025"
+    link: "https://www.facebook.com/share/p/16tALpWmbn/"
 
 coursework: ["Artificial Intelligence and Machine Learning", "Introduction to Medical Imaging", "Digital Signal Processing", "Introduction to Robotics", "Communication Systems", "Linear Algebra", "Probability and Statistics"]
 
 skills:
   - group: "Deep learning"
-    items: "PyTorch, TensorFlow, Keras, scikit-learn, NumPy, Pandas, OpenCV, Matplotlib"
-  - group: "LLMs and agents"
-    items: "LoRA fine-tuning, LlamaIndex, FastAPI"
-  - group: "Quantum computing"
-    items: "Qiskit 1.0+"
+    items: "PyTorch, TensorFlow, Keras, scikit-learn, YOLOv8, NumPy, Pandas, OpenCV, Matplotlib"
+  - group: "Medical imaging"
+    items: "3D Slicer, SimpleITK, scikit-image"
+  - group: "Multimodal and language models"
+    items: "LoRA fine-tuning, LlamaIndex"
+  - group: "Edge and robotics"
+    items: "Raspberry Pi, Arduino, MAVLink"
   - group: "Languages"
-    items: "Python, C, C++, MATLAB, Verilog, JavaScript, HTML/CSS"
-  - group: "Systems"
-    items: "Docker, Git, Linux, Google Cloud Platform, Raspberry Pi"
-  - group: "Hardware and simulation"
-    items: "PSpice, Proteus, Arduino"
-  - group: "Writing"
-    items: "LaTeX"
+    items: "Python, C, C++, MATLAB, Verilog, JavaScript"
+  - group: "Systems and tools"
+    items: "Git, Docker, Linux, Google Cloud Platform, FastAPI, Qiskit, LaTeX"

@@ -8,7 +8,6 @@
   url: /projects/
 - title: CV
   url: /cv/
+# The Blog link is hidden automatically while _posts/ is empty.
 - title: Blog
   url: /blog/
-- title: Photography
-  url: /photography/

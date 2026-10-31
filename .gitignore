@@ -5,3 +5,6 @@ _site/
 vendor/
 Gemfile.lock
 .DS_Store
+
+# Private source material (thesis, unpublished manuscripts, certificates) — never publish
+Important Resources/

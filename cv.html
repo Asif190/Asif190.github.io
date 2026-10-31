@@ -26,7 +26,8 @@ body_class: wide-page cv-page
 <p>
   {% assign n_conf = site.data.publications | where: "type", "conference" | size %}
   {% assign n_pre = site.data.publications | where: "type", "preprint" | size %}
-  {{ n_conf }} peer-reviewed conference papers and {{ n_pre }} preprint. <a href="{{ '/publications/' | relative_url }}">Full list with links and BibTeX</a>.
+  {% assign n_rev = site.data.publications | where: "type", "review" | size %}
+  {{ n_conf }} peer-reviewed conference {% if n_conf == 1 %}paper{% else %}papers{% endif %}, {{ n_pre }} {% if n_pre == 1 %}preprint{% else %}preprints{% endif %}{% if n_rev > 0 %} and {{ n_rev }} {% if n_rev == 1 %}manuscript{% else %}manuscripts{% endif %} in preparation{% endif %}. <a href="{{ '/publications/' | relative_url }}">Full list with links and BibTeX</a>.
 </p>
 
 <h2>Professional experience</h2>
@@ -48,7 +49,7 @@ body_class: wide-page cv-page
 <h2>Teaching and outreach</h2>
 <ul class="entries">
 {% for e in cv.teaching %}
-  <li><div class="entry-head"><strong>{{ e.title }}</strong><span>{{ e.date }}</span></div><p>{{ e.detail }}</p></li>
+  <li><div class="entry-head"><strong>{{ e.title }}</strong><span>{{ e.date }}</span></div><p>{{ e.detail }}{% if e.link %} (<a href="{{ e.link }}">announcement</a>){% endif %}</p></li>
 {% endfor %}
 </ul>
 
@@ -68,6 +69,9 @@ body_class: wide-page cv-page
 <p>{{ cv.coursework | join: ", " }}.</p>
 
 <h2>References</h2>
-<p>Prof. Lutfa Akter, Department of EEE, BUET (thesis supervisor)<br>
-Prof. Shaikh Anowarul Fattah, Department of EEE, BUET (research advisor)<br>
-Contact details available on request.</p>
+<ul class="entries">
+  <li><div class="entry-head"><strong><a href="https://eee.buet.ac.bd/people/faculty/dla">Prof. Lutfa Akter</a></strong><span>Thesis supervisor</span></div>
+  <p>Department of EEE, BUET · <a href="mailto:lutfaakter@eee.buet.ac.bd">lutfaakter@eee.buet.ac.bd</a></p></li>
+  <li><div class="entry-head"><strong><a href="https://eee.buet.ac.bd/people/faculty/dsaf">Prof. Shaikh Anowarul Fattah</a></strong><span>Research advisor</span></div>
+  <p>Department of EEE, BUET · <a href="mailto:fattah@eee.buet.ac.bd">fattah@eee.buet.ac.bd</a></p></li>
+</ul>

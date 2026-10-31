@@ -30,15 +30,15 @@ that `_config.yml`, `_data`, `_includes`, `_layouts` and `_posts` all appear in 
 ## Before you share the link — checklist
 
 - [x] **Photo:** `assets/img/profile.jpg` (hero) and `assets/img/profile-square.jpg` (link previews).
-      To change it, replace those files keeping the same names (portrait 640 × 760 px; square 600 × 600 px).
-- [ ] **CV PDF:** replace `assets/files/CV_Mohammad_Asif_Hasan.pdf` with your current
-      academic CV (the included copy still lists BRIM AI as "Present" and the old LinkedIn URL).
-- [ ] **Paper links:** paste the IEEE Xplore URLs into the `ieee:` fields in `_data/publications.yml`.
-- [ ] **Code links:** add repository URLs to the `code:` fields in `_data/publications.yml`
-      and `_data/projects.yml`, and the years in `year:`.
-- [ ] **Google Scholar / ORCID:** create profiles if you have not, and add their IDs in `_config.yml`.
-- [ ] **Photography:** add your photos (see below) and delete the placeholders.
-- [ ] Read every page once and correct anything that is out of date.
+- [x] **CV PDF:** `assets/files/CV_Mohammad_Asif_Hasan.pdf` is built from
+      `Important Resources/Academic CV/cv_academic_web.tex` (kept out of git). It deliberately has no
+      phone number, street address or CGPA. Rebuild with `pdflatex` twice and copy the PDF over.
+- [x] **Paper and code links** in `_data/publications.yml` and `_data/projects.yml`.
+- [ ] **Google Scholar / ORCID:** create profiles and add their IDs in `_config.yml`.
+- [ ] **Project years** still blank for HIVE-R, the quantum classifier and the vending machine (`_data/projects.yml`).
+- [ ] **Photography** is hidden (`published: false` in `photography.html`). Add real photos, then re-enable it.
+- [ ] **Blog** is hidden from the menu automatically until the first post exists in `_posts/`.
+- [ ] Update the manuscript entries in `_data/publications.yml` when they are submitted or accepted.
 
 ## Where to edit things
 

@@ -3,9 +3,9 @@
 
 - title: "HIVE-R: Bio-inspired swarm UAV system for human detection in GPS-denied rescue environments"
   area: Edge vision and robotics
-  glyph: drone          # drone | lesion | fusion | qubit | chip | text
+  glyph: drone          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
   featured: true
-  year: ""          # add the year
+  year: ""          # add the year if you know it
   summary: >-
     A "Queen-Worker" multi-UAV framework for search and rescue where GPS is unavailable.
     I optimised and deployed a 6.2 MB YOLOv8n detector on a Raspberry Pi 4, and the team fused
@@ -13,60 +13,72 @@
     Detections are geolocated and relayed to the ground station over a 915 MHz MAVLink link.
   metrics: ["86.9% mAP under smoke and dust", "185 ms on-device inference", "< 500 ms end-to-end telemetry latency"]
   tags: [YOLOv8n, Raspberry Pi 4, EKF, Visual odometry, MAVLink]
-  links: { code: "", demo: "" }
+  links: { code: "https://github.com/Asif190/HIVE-R-Bio-Inspired-SwarmDroneSystemforHumanDetectioninGPS-DeniedRescueEnvironments" }
 
 - title: "Adaptive multimodal sentiment analysis and feedback summarisation"
   area: Multimodal learning and NLP
-  glyph: text          # drone | lesion | fusion | qubit | chip | text
-  year: ""          # add the year
+  glyph: text          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
+  year: "2025"
   summary: >-
     An end-to-end pipeline for analysing course feedback: MAG-BERT for cross-modal fusion,
     LoRA-fine-tuned T5 for parameter-efficient summarisation and suggestion generation,
     and SHAP for explaining which inputs drive each prediction. Published at ICCIT 2025.
   metrics: ["LoRA reduces trainable parameters while keeping generation quality"]
   tags: [MAG-BERT, LoRA, T5, SHAP, PyTorch]
-  links: { code: "", paper: "" }
+  links: { code: "https://github.com/Asif190/EEE-402-AIML-project", paper: "https://ieeexplore.ieee.org/document/11491303" }
+
+- title: "AstroVeritas: machine-learning vetting of exoplanet transit candidates"
+  area: Machine learning for science
+  glyph: lightcurve          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
+  year: "2025"
+  summary: >-
+    Built with Team Beyond Kepler for the NASA Space Apps Challenge 2025. The pipeline ingests TESS light curves,
+    injects synthetic transits to create labelled training signals, extracts features and classifies
+    candidates with LightGBM, and is served through a web app.
+  metrics: []
+  tags: [TESS, LightGBM, Time series, Synthetic injection]
+  links: { code: "https://github.com/Asif190/Team-Beyond-Kepler-NASA-space-app-challenge-2025-", demo: "https://astroveritas.vercel.app/" }
 
 - title: "Breast cancer detection with GMM-HMRF segmentation and PCA-optimised classifiers"
   area: Medical image analysis
-  glyph: lesion          # drone | lesion | fusion | qubit | chip | text
-  year: ""          # add the year
+  glyph: lesion          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
+  year: "2024 – 2025"
   summary: >-
     A MATLAB pipeline that segments mammograms with a Gaussian mixture model regularised by a
     hidden Markov random field, then classifies regions with PCA-reduced machine learning models
     for real-time screening support. Published at ICCIT 2025.
   metrics: []
   tags: [MATLAB, GMM, HMRF, PCA]
-  links: { code: "" }
+  links: { code: "https://github.com/Asif190/EEE-312-Matlab-Project", paper: "https://ieeexplore.ieee.org/document/11490289" }
 
 - title: "Variational quantum classifier for Iris classification"
   area: Quantum machine learning
-  glyph: qubit          # drone | lesion | fusion | qubit | chip | text
-  year: ""          # add the year
+  glyph: qubit          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
+  year: ""          # add the year if you know it
   summary: >-
     A NISQ-oriented variational quantum classifier in Qiskit 1.0+, comparing TwoLocal and EfficientSU2
     ansätze optimised with COBYLA, and stress-tested under simulated depolarising and readout noise.
   metrics: ["65–80% test accuracy on a noisy simulator"]
   tags: [Qiskit, VQC, NISQ, COBYLA]
-  links: { code: "" }
+  links: { code: "https://github.com/Asif190/Quantum-Machine-learning-Initial-" }
 
 - title: "Quantum simulation of a particle in a box"
   area: Quantum machine learning
-  glyph: qubit          # drone | lesion | fusion | qubit | chip | text
-  year: ""          # add the year
+  glyph: qubit          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
+  year: "2023"
   summary: >-
     Finite-difference solution of the time-independent Schrödinger equation: building the Hamiltonian
     matrix, solving for eigenvalues and eigenvectors, and visualising quantised energy levels and wavefunctions.
   metrics: []
   tags: [MATLAB, Numerical methods]
-  links: { code: "" }
+  links: { code: "https://github.com/Asif190/Matlab_project_2-1" }
 
 - title: "Automatic vending machine with IC-based digital logic"
   area: Digital systems
-  glyph: chip          # drone | lesion | fusion | qubit | chip | text
-  year: ""          # add the year
+  glyph: chip          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
+  year: ""          # add the year if you know it
   summary: >-
     A finite-state-machine billing system built entirely from combinational and sequential logic ICs.
   metrics: []
   tags: [FSM, Digital logic]
-  links: { demo: "" }
+  links: {}          # the old YouTube demo is unavailable; add a new link here if you re-upload it

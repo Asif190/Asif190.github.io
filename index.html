@@ -6,6 +6,7 @@ body_class: home
 {% assign a = site.author %}
 {% assign n_conf = site.data.publications | where: "type", "conference" | size %}
 {% assign n_pre = site.data.publications | where: "type", "preprint" | size %}
+{% assign n_rev = site.data.publications | where: "type", "review" | size %}
 <section class="hero">
   <div class="wrap hero-inner">
     <div class="hero-text">
@@ -14,10 +15,10 @@ body_class: home
       <p class="affil">{% include icon.html name="location" %}{{ a.degree }}, BUET, Dhaka</p>
       <p class="statement">
         I build image analysis models that a clinician can inspect and question.
-        My thesis studied breast cancer imaging end to end — segmenting lesions in ultrasound,
-        removing the pectoral muscle from mammograms without erasing lesions, and predicting BI-RADS
-        categories from images and clinical metadata together. I also work on lightweight RGB–infrared
-        detectors that run on drones and single-board computers.
+        My undergraduate thesis, joint with a classmate, studied breast cancer imaging end to end — segmenting
+        lesions in ultrasound, removing the pectoral muscle from mammograms without erasing lesions, and predicting
+        BI-RADS categories from images and clinical metadata together. I also work on lightweight RGB–infrared
+        detectors that run on drones and single-board computers, and on how models fail when the data shifts.
       </p>
       {% if site.availability != "" %}<p class="availability"><span class="pulse" aria-hidden="true"></span>{{ site.availability }}</p>{% endif %}
       <div class="hero-actions">
@@ -41,9 +42,9 @@ body_class: home
 </section>
 
 <section class="wrap facts" aria-label="At a glance">
-  <div><strong>{{ n_conf }}</strong><span>peer-reviewed conference papers</span></div>
-  <div><strong>{{ n_pre }}</strong><span>arXiv preprint, with journal work in preparation</span></div>
-  <div><strong>2nd runner-up</strong><span>IEEE VIP Cup 2025, ICIP, from 80+ teams</span></div>
+  <div><strong>{{ n_conf }}</strong><span>peer-reviewed conference {% if n_conf == 1 %}paper{% else %}papers{% endif %}</span></div>
+  <div><strong>{{ n_pre }} + {{ n_rev }}</strong><span>arXiv {% if n_pre == 1 %}preprint{% else %}preprints{% endif %} and {% if n_rev == 1 %}manuscript{% else %}manuscripts{% endif %} in preparation</span></div>
+  <div><strong>3rd place</strong><span>IEEE VIP Cup 2025 final (Second Runner-Up), ICIP 2025</span></div>
   <div><strong>B.Sc. EEE</strong><span>BUET, 2026, thesis in breast cancer imaging</span></div>
 </section>
 
@@ -69,9 +70,9 @@ body_class: home
       <p>Lightweight RGB–IR detectors and on-device deployment under tight latency and memory budgets.</p>
     </article>
     <article class="theme">
-      {% include glyph.html name="qubit" %}
-      <h3>Quantum machine learning</h3>
-      <p>Variational quantum classifiers and how they behave under realistic NISQ noise.</p>
+      {% include glyph.html name="shift" %}
+      <h3>Robustness and evaluation</h3>
+      <p>Rigorous cross-validation with significance tests, and how models degrade under distribution shift and shortcut features.</p>
     </article>
   </div>
 </section>
@@ -81,7 +82,7 @@ body_class: home
     <div class="section-head">
       <div>
         <h2>Thesis at a glance</h2>
-        <p class="section-sub">Toward Clinically Interpretable Breast Cancer Imaging, BUET 2026. Supervised by Prof. Lutfa Akter.</p>
+        <p class="section-sub">Toward Clinically Interpretable Breast Cancer Imaging, BUET 2026. Joint work with Md Nazmus Sakib Tushar, supervised by Prof. Lutfa Akter.</p>
       </div>
       <a class="section-link" href="{{ '/research/' | relative_url }}#clinically-interpretable-breast-cancer-imaging">Read the details</a>
     </div>
@@ -93,7 +94,7 @@ body_class: home
   <div>
     <div class="section-head"><h2>News</h2></div>
     <ul class="news">
-      {% for n in site.data.news limit: 6 %}
+      {% for n in site.data.news limit: 7 %}
       <li><time>{{ n.date | append: '-01' | date: '%b %Y' }}</time><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
       {% endfor %}
     </ul>

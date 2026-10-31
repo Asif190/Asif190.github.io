@@ -1,13 +1,15 @@
-# Newest first. The home page shows the first 6. Markdown links are allowed in "text".
+# Newest first. The home page shows the first 7. Markdown links are allowed in "text".
 - date: 2026-10
-  text: "Preparing a journal manuscript on boundary-aware breast ultrasound lesion segmentation, extending my undergraduate thesis."
+  text: "Preparing three manuscripts: boundary-aware breast ultrasound segmentation (extending the thesis), temporal shift in Bangla political meme detection, and weighted fusion of RGB and thermal drone detectors. See [publications](/publications/)."
 - date: 2026-07
   text: "Graduated with a B.Sc. in Electrical and Electronic Engineering from BUET."
 - date: 2026-06
-  text: "Defended my undergraduate thesis on clinically interpretable breast cancer imaging, supervised by Prof. Lutfa Akter."
+  text: "Defended our undergraduate thesis on clinically interpretable breast cancer imaging (with Md Nazmus Sakib Tushar), supervised by Prof. Lutfa Akter."
+- date: 2026-05
+  text: "Joined BRIM AI, Dhaka, as an AI System Development Engineer (May – Sep 2026), building an on-device computer-vision agent for security surveillance."
 - date: 2025-12
-  text: "Two papers presented at ICCIT 2025 and one at IEEE WIECON-ECE 2025, Cox's Bazar."
+  text: "Two papers presented at ICCIT 2025 ([GMM-HMRF](https://ieeexplore.ieee.org/document/11490289), [MAG-BERT](https://ieeexplore.ieee.org/document/11491303)) and one at [IEEE WIECON-ECE 2025](https://ieeexplore.ieee.org/document/11526317), Cox's Bazar."
 - date: 2025-10
   text: "EGD-YOLO preprint released on [arXiv](https://arxiv.org/abs/2510.10765)."
 - date: 2025-09
-  text: "Our team placed Second Runner-Up at the IEEE VIP Cup 2025, held with ICIP 2025, and received an ICIP travel grant."
+  text: "Our team EyeQ placed Second Runner-Up (third place) in the IEEE VIP Cup 2025 final at ICIP 2025, Anchorage, Alaska, supported by an ICIP travel grant."

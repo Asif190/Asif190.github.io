@@ -10,11 +10,31 @@
 - key: hasan2026usseg
   abbr: "In prep."        # short badge shown next to the entry
   type: review
-  title: "A Boundary-Aware Hybrid Attention Framework for Breast Ultrasound Lesion Segmentation"
+  title: "HybridSwinUNet: A Boundary-Aware, Style-Randomized Attention Network for Robust Breast Ultrasound Lesion Segmentation Under Rigorous Cross-Validation"
   authors: "M. A. Hasan, et al."
   venue: "Journal manuscript in preparation"
   year: 2026
-  note: "Extends Part II of the undergraduate thesis: residual encoding, windowed self-attention and a boundary-aware loss, evaluated across BUSI, UDIAT and BUS-BRA."
+  note: "Extends Part II of the undergraduate thesis. Evaluated on BUSI, UDIAT and BUS-BRA under stratified k-fold cross-validation against five baselines trained under identical conditions."
+  links: {}
+
+- key: sarkar2026memes
+  abbr: "In prep."
+  type: review
+  title: "Memes Move Faster Than Models: Script, Prior, Shortcut and Temporal Shift in Multimodal Bangla Political Meme Detection"
+  authors: "S. Sarkar, R. Mahmud, M. A. Hasan, and M. M. Islam"
+  venue: "Manuscript in preparation"
+  year: 2026
+  note: "Studies how multimodal classifiers for Bangla political memes hold up under temporal distribution shift."
+  links: {}
+
+- key: ensemble2026rgbir
+  abbr: "In prep."
+  type: review
+  title: "Weighted Ensemble Fusion of Heterogeneous RGB–IR Detectors for Small-Object Drone–Bird Detection: Architectural Ablation and the Accuracy–Latency Trade-off"
+  authors: "BUET VIP Cup team, including M. A. Hasan (author order to be finalised)"
+  venue: "Manuscript in preparation"
+  year: 2026
+  note: "Follow-up to the IEEE VIP Cup 2025 work on combining RGB and thermal detectors for small-object detection."
   links: {}
 
 - key: hasan2025gmmhmrf
@@ -27,8 +47,8 @@
   location: "Cox's Bazar, Bangladesh"
   year: 2025
   links:
-    ieee: ""          # paste the IEEE Xplore URL here
-    code: ""          # repository URL
+    ieee: "https://ieeexplore.ieee.org/document/11490289"
+    code: "https://github.com/Asif190/EEE-312-Matlab-Project"
   bibtex: |
     @inproceedings{hasan2025gmmhmrf,
       title     = {Real-time Breast Cancer Classification Employing {GMM-HMRF} Segmentation and {PCA}-Optimized Machine Learning Algorithms},
@@ -68,7 +88,7 @@
   location: "Cox's Bazar, Bangladesh"
   year: 2025
   links:
-    ieee: ""
+    ieee: "https://ieeexplore.ieee.org/document/11526317"
   bibtex: |
     @inproceedings{labiba2025tracking,
       title     = {Real-Time Multi-Modal Drone and Bird Tracking Using Modality-Aware Adaptation and Physics-Aware Filtering},
@@ -88,8 +108,8 @@
   location: "Cox's Bazar, Bangladesh"
   year: 2025
   links:
-    ieee: ""
-    code: ""          # repository URL
+    ieee: "https://ieeexplore.ieee.org/document/11491303"
+    code: "https://github.com/Asif190/EEE-402-AIML-project"
   bibtex: |
     @inproceedings{hasan2025magbert,
       title     = {Multimodal Pipeline for Sentiment Mining via {MAG-BERT}, {LoRA-T5} Generated Suggestions with {SHAP} Explanations for Curriculum Optimization},
