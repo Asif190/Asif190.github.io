@@ -233,6 +233,15 @@ h3 { font-size: 1.15rem; margin: 1.75rem 0 .5rem; font-weight: 600; }
 .tg-chart li.hi { font-weight: 600; }
 .tg-val { text-align: right; font-variant-numeric: tabular-nums; }
 .tg-chart-note { font-size: .72rem; color: #56636e; margin: .45rem 0 0; }
+.tg-highlight { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1.6rem; align-items: start; margin-top: 1.1rem;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 1.2rem; }
+.tg-highlight-media { border: 1px solid var(--rule); background: #fff; border-radius: 10px; align-self: start; }
+.tg-highlight-text h3 { font-size: 1.25rem; margin: 0 0 .5rem; }
+.tg-highlight-text p { margin: 0 0 .8rem; font-size: 1rem; line-height: 1.6; }
+.tg-stats { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .55rem; }
+.tg-stats li { display: grid; grid-template-columns: 6.8rem 1fr; gap: .75rem; align-items: baseline; font-family: var(--sans); font-size: .9rem; color: var(--muted); }
+.tg-stats strong { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; color: var(--accent); }
+@media (max-width: 880px) { .tg-highlight { grid-template-columns: 1fr; max-width: 640px; } }
 @media (max-width: 880px) { .thesis-glance { grid-template-columns: 1fr; max-width: 520px; } }
 
 /* ---------- results tables ---------- */
