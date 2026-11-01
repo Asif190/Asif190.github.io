@@ -10,6 +10,13 @@
     <p class="pub-authors">{{ p.authors | replace: 'M. A. Hasan', me }}</p>
     <p class="pub-venue"><em>{{ p.venue }}</em>{% if p.location %}, {{ p.location }}{% endif %}{% if p.type != "review" %}, {{ p.year }}{% endif %}.</p>
     {% if p.note %}<p class="pub-note">{{ p.note }}</p>{% endif %}
+    {% if p.figures %}
+    <div class="pub-figs{% if include.compact %} compact{% endif %}">
+      {% for fg in p.figures %}{% if include.compact and forloop.index > 1 %}{% break %}{% endif %}
+      {% include figure.html file=fg.file ext=fg.ext caption=fg.caption alt=fg.alt %}
+      {% endfor %}
+    </div>
+    {% endif %}
     <p class="pub-links">
       {% if p.links.pdf and p.links.pdf != "" %}<a href="{{ p.links.pdf }}">PDF</a>{% endif %}
       {% if p.links.arxiv and p.links.arxiv != "" %}<a href="{{ p.links.arxiv }}">arXiv</a>{% endif %}

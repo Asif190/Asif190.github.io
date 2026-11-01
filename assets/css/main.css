@@ -377,6 +377,19 @@ h3 { font-size: 1.15rem; margin: 1.75rem 0 .5rem; font-weight: 600; }
 .lb-controls button { font: inherit; font-family: var(--sans); font-size: .9rem; padding: .4rem .9rem; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06); color: #fff; border-radius: 8px; cursor: pointer; }
 .lb-controls button:hover { border-color: var(--glow); }
 
+/* ---------- paper figures ---------- */
+.paper-fig { margin: 0; }
+.paper-fig .photo { border: 1px solid var(--rule); background: #fff; border-radius: 10px; }
+.paper-fig .photo img { aspect-ratio: 8 / 5; object-fit: contain; background: #fff; }
+.paper-fig figcaption { font-family: var(--sans); font-size: .8rem; line-height: 1.45; color: var(--muted); margin-top: .45rem; }
+.pub-figs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin: .9rem 0 .2rem; }
+.pub-figs.compact { grid-template-columns: minmax(0, 260px); }
+.pub-figs.compact figcaption { display: none; }
+@media (max-width: 680px) { .pub-figs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pub-figs figcaption { display: none; } }
+.fig-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; margin: 1.4rem 0 1.6rem; }
+.fig-row .paper-fig .photo img { aspect-ratio: auto; max-height: 340px; }
+.prose .fig-row figure { margin: 0; }
+
 /* ---------- awards & honours ---------- */
 .award-highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0 0 1.75rem; }
 .award-highlights > div { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: .2rem; }

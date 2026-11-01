@@ -1,0 +1,8 @@
+{%- comment -%}
+  A clickable figure. Params: file (path under /assets/img/, without extension), caption, alt,
+  ext (default "jpg"), class (optional). Expects FILE.EXT and FILE-thumb.jpg.
+{%- endcomment -%}
+{%- assign ext = include.ext | default: "jpg" -%}
+{%- capture full -%}/assets/img/{{ include.file }}.{{ ext }}{%- endcapture -%}
+{%- capture thumb -%}/assets/img/{{ include.file }}-thumb.jpg{%- endcapture -%}
+<figure class="paper-fig{% if include.class %} {{ include.class }}{% endif %}"><button type="button" class="photo" data-full="{{ full | relative_url }}" data-caption="{{ include.caption | strip_html | escape }}"><img src="{% if include.large %}{{ full | relative_url }}{% else %}{{ thumb | relative_url }}{% endif %}" alt="{{ include.alt | escape }}" loading="lazy"></button><figcaption>{{ include.caption }}</figcaption></figure>

@@ -41,6 +41,8 @@ Distinguishing drones from birds is hard in smoke, haze and low light, and count
 - **EGD-YOLO**, a lightweight detector that adds Ghost modules and Efficient Multi-scale Attention (EMA) to YOLOv8n for robust discrimination under adverse conditions. I built the Ghost and EMA modules and the RGB–IR data pipeline, ran the experiments and ablations, and co-wrote the paper ([arXiv:2510.10765](https://arxiv.org/abs/2510.10765)).
 - **A real-time multimodal tracker** that uses modality-aware adaptation and physics-aware filtering to keep identities stable across frames ([IEEE WIECON-ECE 2025](https://ieeexplore.ieee.org/document/11526317)). Its four-channel EGD-YOLOv8n fusion detector reached 70.1% mAP, 13.8% above single-modality baselines with 59% fewer parameters, and the full pipeline ran at 97.87 FPS. I built the detection model, ran the tracking experiments and evaluation, and co-wrote the paper.
 
+<div class="fig-row">{% include figure.html file="pubs/egd-yolo-architecture" large=true caption="EGD-YOLO architecture: Ghost blocks in the backbone, EMA attention in the neck." alt="EGD-YOLO architecture diagram" %}{% include figure.html file="pubs/egd-yolo-detections" large=true caption="EGD-YOLO detections of drones and birds in RGB and infrared frames." alt="Six frames with drone and bird detection boxes" %}{% include figure.html file="pubs/tracking-snapshots" large=true caption="Multimodal tracking with trajectories and approaching / constant-distance estimates (WIECON-ECE 2025)." alt="Four tracking frames with trajectories and direction labels" %}</div>
+
 Our team, EyeQ (supervised by Prof. Fattah and mentored by Anjan Kumar Bagchi), placed Second Runner-Up (third place) in the final at ICIP 2025 in Anchorage, Alaska; see [Awards & Honours]({{ '/awards/' | relative_url }}). The same concern for on-device efficiency drives [HIVE-R]({{ '/projects/' | relative_url }}), a swarm UAV system whose YOLOv8n detector runs at 185 ms per frame on a Raspberry Pi 4.
 
 ## Current work
@@ -55,6 +57,8 @@ Our team, EyeQ (supervised by Prof. Fattah and mentored by Anjan Kumar Bagchi), 
 - Probabilistic mammogram segmentation with a Gaussian mixture model regularised by a hidden Markov random field, followed by PCA-reduced classifiers ([ICCIT 2025](https://ieeexplore.ieee.org/document/11490289)).
 - Multimodal sentiment analysis of course feedback with MAG-BERT, LoRA-fine-tuned T5 summarisation and SHAP explanations ([ICCIT 2025](https://ieeexplore.ieee.org/document/11491303)).
 - Variational quantum classifiers in Qiskit evaluated under simulated NISQ noise.
+
+<div class="fig-row">{% include figure.html file="pubs/gmm-hmrf-pipeline" large=true caption="GMM–HMRF mammogram segmentation and PCA-optimised classification (method schematic, ICCIT 2025)." alt="GMM-HMRF pipeline schematic" %}{% include figure.html file="pubs/magbert-method" large=true caption="MAG-BERT: modality attention gate fusing review text with numerical ratings (ICCIT 2025)." alt="MAG-BERT method diagram" %}</div>
 
 ## Directions I want to pursue
 

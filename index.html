@@ -106,7 +106,7 @@ body_class: home
     </div>
     <ol class="pubs compact">
       {% for p in site.data.publications %}{% if p.selected %}
-        {% include publication.html pub=p %}
+        {% include publication.html pub=p compact=true %}
       {% endif %}{% endfor %}
     </ol>
   </div>

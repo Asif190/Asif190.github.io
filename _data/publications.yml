@@ -46,6 +46,10 @@
   venue: "28th International Conference on Computer and Information Technology (ICCIT)"
   location: "Cox's Bazar, Bangladesh"
   year: 2025
+  figures:
+    - file: pubs/gmm-hmrf-pipeline
+      caption: "Method overview: denoising, GMM initialisation, HMRF–EM segmentation, texture features, PCA and classification (schematic drawn from the released code)."
+      alt: "Schematic of the GMM-HMRF pipeline from mammogram to normal, benign or malignant classification"
   links:
     ieee: "https://ieeexplore.ieee.org/document/11490289"
     code: "https://github.com/Asif190/EEE-312-Matlab-Project"
@@ -67,6 +71,16 @@
   authors: "S. Sarkar, M. A. Hasan, K. A. Shahriar, F. Labiba, N. Tasnim, and S. A. Fattah"
   venue: "arXiv preprint arXiv:2510.10765"
   year: 2025
+  figures:
+    - file: pubs/egd-yolo-architecture
+      caption: "EGD-YOLO architecture: Ghost convolutions and C3Ghost blocks in the backbone, EMA attention in the neck (Fig. 4 of the paper)."
+      alt: "EGD-YOLO architecture diagram with backbone, neck and detection heads"
+    - file: pubs/egd-yolo-pipeline
+      caption: "Training pipelines for RGB, infrared and paired RGB + IR input (Fig. 2 of the paper)."
+      alt: "Flowchart of RGB, IR and fused training pipelines"
+    - file: pubs/egd-yolo-detections
+      caption: "Example drone and bird detections in RGB and infrared frames (from Fig. 5 of the paper)."
+      alt: "Six video frames with drone and bird detection boxes"
   links:
     arxiv: "https://arxiv.org/abs/2510.10765"
     pdf: "https://arxiv.org/pdf/2510.10765"
@@ -87,6 +101,13 @@
   venue: "IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering (WIECON-ECE)"
   location: "Cox's Bazar, Bangladesh"
   year: 2025
+  figures:
+    - file: pubs/tracking-snapshots
+      caption: "Tracking snapshots: (a) bird, (b) drone, (c) multiple objects in RGB, (d) multiple objects in IR, with trajectories and an approaching / constant-distance estimate (Fig. 3 of the paper)."
+      alt: "Four tracking frames with trajectories, coordinates and motion-direction labels"
+    - file: pubs/tracking-pipeline
+      caption: "Multimodal tracking pipeline: per-modality detection, modality-specific processing, ByteTrack and temporal analysis (Fig. 1 of the paper)."
+      alt: "Flowchart from video input through detection, processing, ByteTrack tracking and temporal analysis"
   links:
     ieee: "https://ieeexplore.ieee.org/document/11526317"
   bibtex: |
@@ -107,6 +128,10 @@
   venue: "28th International Conference on Computer and Information Technology (ICCIT)"
   location: "Cox's Bazar, Bangladesh"
   year: 2025
+  figures:
+    - file: pubs/magbert-method
+      caption: "Method: the modality attention gate fusing BERT text features with numerical ratings, and the full sentiment, FLAN-T5 suggestion and SHAP pipeline (from the project poster)."
+      alt: "Diagram of the MAG-BERT attention gate and the analysis pipeline"
   links:
     ieee: "https://ieeexplore.ieee.org/document/11491303"
     code: "https://github.com/Asif190/EEE-402-AIML-project"
