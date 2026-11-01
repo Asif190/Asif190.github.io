@@ -54,11 +54,11 @@ Our team, EyeQ (supervised by Prof. Fattah and mentored by Anjan Kumar Bagchi), 
 
 ## Earlier work
 
-- Probabilistic mammogram segmentation with a Gaussian mixture model regularised by a hidden Markov random field, followed by PCA-reduced classifiers ([ICCIT 2025](https://ieeexplore.ieee.org/document/11490289)).
-- Multimodal sentiment analysis of course feedback with MAG-BERT, LoRA-fine-tuned T5 summarisation and SHAP explanations ([ICCIT 2025](https://ieeexplore.ieee.org/document/11491303)).
+- Mammogram classification with AMF and CLAHE preprocessing, GMM-HMRF lesion segmentation, texture features reduced by PCA, and SVM, random-forest, PNN and neural-network classifiers, served through a Streamlit app; the SVM reached 83.3% accuracy and 0.98 AUC ([ICCIT 2025](https://ieeexplore.ieee.org/document/11490289)).
+- Multimodal sentiment analysis of 5,000 course evaluations with MAG-BERT, LoRA-fine-tuned FLAN-T5 suggestions and SHAP explanations: 86.4% accuracy, 0.91 AUC and macro-F1 0.87 on a held-out test set ([ICCIT 2025](https://ieeexplore.ieee.org/document/11491303)).
 - Variational quantum classifiers in Qiskit evaluated under simulated NISQ noise.
 
-<div class="fig-row">{% include figure.html file="pubs/gmm-hmrf-pipeline" large=true caption="GMM–HMRF mammogram segmentation and PCA-optimised classification (method schematic, ICCIT 2025)." alt="GMM-HMRF pipeline schematic" %}{% include figure.html file="pubs/magbert-method" large=true caption="MAG-BERT: modality attention gate fusing review text with numerical ratings (ICCIT 2025)." alt="MAG-BERT method diagram" %}</div>
+<div class="fig-row">{% include figure.html file="pubs/gmm-hmrf-workflow" large=true caption="GMM-HMRF breast cancer classification workflow (ICCIT 2025, Fig. 9)." alt="GMM-HMRF workflow diagram" %}{% include figure.html file="pubs/gmm-hmrf-segmentation" large=true caption="CBIS-DDSM mammogram region and its GMM-HMRF segmentation (ICCIT 2025, Fig. 4)." alt="Mammogram patch and segmentation mask" %}{% include figure.html file="pubs/magbert-architecture" large=true caption="MAG-BERT architecture with text and numeric modality gates (ICCIT 2025, Fig. 3)." alt="MAG-BERT architecture diagram" %}</div>
 
 ## Directions I want to pursue
 

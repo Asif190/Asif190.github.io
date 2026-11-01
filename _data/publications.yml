@@ -47,9 +47,18 @@
   location: "Cox's Bazar, Bangladesh"
   year: 2025
   figures:
-    - file: pubs/gmm-hmrf-pipeline
-      caption: "Method overview: denoising, GMM initialisation, HMRF–EM segmentation, texture features, PCA and classification (schematic drawn from the released code)."
-      alt: "Schematic of the GMM-HMRF pipeline from mammogram to normal, benign or malignant classification"
+    - file: pubs/gmm-hmrf-workflow
+      caption: "Workflow: AMF and CLAHE preprocessing, GMM-HMRF segmentation, GLCM features, PCA, SVM / ENN classifiers with k-fold validation, and deployment in Streamlit (Fig. 9 of the paper)."
+      alt: "Workflow diagram of the GMM-HMRF breast cancer classification pipeline"
+    - file: pubs/gmm-hmrf-segmentation
+      caption: "A CBIS-DDSM mammogram region and its GMM-HMRF lesion segmentation (Fig. 4 of the paper)."
+      alt: "Grayscale mammogram patch beside its binary lesion segmentation mask"
+    - file: pubs/gmm-hmrf-preprocessing
+      caption: "Preprocessing of a CBIS-DDSM image: original, after adaptive median filtering, and after CLAHE (Fig. 2 of the paper)."
+      alt: "Three versions of a mammogram: original, after AMF, after CLAHE"
+    - file: pubs/gmm-hmrf-app
+      caption: "The Streamlit web app classifying an uploaded mammogram in real time."
+      alt: "Screenshot of the Streamlit breast cancer detection app showing a prediction"
   links:
     ieee: "https://ieeexplore.ieee.org/document/11490289"
     code: "https://github.com/Asif190/EEE-312-Matlab-Project"
@@ -129,9 +138,15 @@
   location: "Cox's Bazar, Bangladesh"
   year: 2025
   figures:
-    - file: pubs/magbert-method
-      caption: "Method: the modality attention gate fusing BERT text features with numerical ratings, and the full sentiment, FLAN-T5 suggestion and SHAP pipeline (from the project poster)."
-      alt: "Diagram of the MAG-BERT attention gate and the analysis pipeline"
+    - file: pubs/magbert-architecture
+      caption: "MAG-BERT architecture: BERT text features and numerical ratings combined through learned modality gates (Fig. 3 of the paper)."
+      alt: "MAG-BERT architecture diagram with text and numeric gates feeding a fused vector"
+    - file: pubs/magbert-workflow
+      caption: "End-to-end workflow: MAG-BERT sentiment classification, LoRA FLAN-T5 suggestion and limitation generation, and SHAP analysis (Fig. 9 of the paper)."
+      alt: "Workflow diagram from course reviews to sentiment, suggestions and SHAP outputs"
+    - file: pubs/magbert-confusion
+      caption: "Confusion matrix for five-class sentiment on the held-out test set (Fig. 5 of the paper)."
+      alt: "Five-by-five confusion matrix for sentiment classes"
   links:
     ieee: "https://ieeexplore.ieee.org/document/11491303"
     code: "https://github.com/Asif190/EEE-402-AIML-project"

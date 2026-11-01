@@ -23,7 +23,7 @@
     An end-to-end pipeline for analysing course feedback: MAG-BERT for cross-modal fusion,
     LoRA-fine-tuned T5 for parameter-efficient summarisation and suggestion generation,
     and SHAP for explaining which inputs drive each prediction. Published at ICCIT 2025.
-  metrics: ["LoRA reduces trainable parameters while keeping generation quality"]
+  metrics: ["86.4% accuracy, 0.91 AUC, macro-F1 0.87 on 5,000 evaluations"]
   tags: [MAG-BERT, LoRA, T5, SHAP, PyTorch]
   links: { code: "https://github.com/Asif190/EEE-402-AIML-project", paper: "https://ieeexplore.ieee.org/document/11491303" }
 
@@ -44,11 +44,12 @@
   glyph: lesion          # drone | lesion | fusion | qubit | chip | text | shift | lightcurve
   year: "2024 – 2025"
   summary: >-
-    A MATLAB pipeline that segments mammograms with a Gaussian mixture model regularised by a
-    hidden Markov random field, then classifies regions with PCA-reduced machine learning models
-    for real-time screening support. Published at ICCIT 2025.
-  metrics: []
-  tags: [MATLAB, GMM, HMRF, PCA]
+    A mammogram pipeline on CBIS-DDSM and a private dataset: adaptive median filtering and CLAHE, lesion
+    segmentation with a Gaussian mixture model regularised by a hidden Markov random field, texture, shape and
+    frequency features reduced by PCA (95% variance), and PNN, SVM, random-forest and neural-network classifiers,
+    deployed as a real-time Streamlit app. Published at ICCIT 2025.
+  metrics: ["SVM: 83.3% accuracy, 0.98 AUC"]
+  tags: [MATLAB, Python, GMM-HMRF, PCA, SVM, Streamlit]
   links: { code: "https://github.com/Asif190/EEE-312-Matlab-Project", paper: "https://ieeexplore.ieee.org/document/11490289" }
 
 - title: "Variational quantum classifier for Iris classification"
