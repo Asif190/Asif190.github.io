@@ -54,7 +54,7 @@ that `_config.yml`, `_data`, `_includes`, `_layouts` and `_posts` all appear in 
 | Photography | `_data/photos.yml` + images in `assets/photos/` |
 | Menu | `_data/navigation.yml` |
 | Colours and fonts | top of `assets/css/main.css` |
-| Thesis diagram on the home and research pages | `_includes/thesis-diagram.html` |
+| Thesis cards on the home page | `_includes/thesis-glance.html` (images in `assets/img/thesis/`) |
 | Research-interest cards | `index.html` (icons: `_includes/glyph.html`) |
 
 Most edits can be made directly on github.com: open the file, click the pencil icon, edit, and

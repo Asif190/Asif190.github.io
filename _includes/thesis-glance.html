@@ -1,0 +1,47 @@
+{%- comment -%}
+  "Thesis at a glance" cards for the home page, built from the thesis's own figures and numbers.
+  Images live in assets/img/thesis/ (NAME.jpg + NAME-thumb.jpg). Part III has no figure in the
+  thesis, so its card draws a small bar chart from thesis Table 14.2 (BI-RADS 4 F1).
+{%- endcomment -%}
+<div class="thesis-glance">
+  <article class="tg-card">
+    <button type="button" class="photo tg-media" data-full="{{ '/assets/img/thesis/part1-framework.jpg' | relative_url }}" data-caption="Part I — Lesion-Aware Attention U-Net: inference pipeline and composite training loss (thesis Fig. 6.1)">
+      <img src="{{ '/assets/img/thesis/part1-framework.jpg' | relative_url }}" alt="Lesion-Aware Attention U-Net inference pipeline and training framework" loading="lazy">
+    </button>
+    <div class="tg-body">
+      <p class="tg-kicker">Part I · Mammography</p>
+      <h3>Pectoral muscle removal that preserves lesions</h3>
+      <p class="tg-metric">LPR 97.7% · DSC 0.897</p>
+      <p class="tg-sub">+16.6 pp lesion preservation over the best classical baseline (p &lt; 0.001), CBIS-DDSM</p>
+    </div>
+  </article>
+  <article class="tg-card">
+    <button type="button" class="photo tg-media" data-full="{{ '/assets/img/thesis/part2-architecture.jpg' | relative_url }}" data-caption="Part II — boundary-aware hybrid attention network for breast ultrasound segmentation">
+      <img src="{{ '/assets/img/thesis/part2-architecture.jpg' | relative_url }}" alt="Encoder-decoder network with attention gates and a windowed self-attention bottleneck" loading="lazy">
+    </button>
+    <div class="tg-body">
+      <p class="tg-kicker">Part II · Ultrasound</p>
+      <h3>Boundary-aware lesion segmentation</h3>
+      <p class="tg-metric">Dice 77.3 / 82.2 / 88.6%</p>
+      <p class="tg-sub">BUSI / UDIAT / BUS-BRA under k-fold cross-validation; lowest fold variance of six methods</p>
+    </div>
+  </article>
+  <article class="tg-card">
+    <figure class="tg-media tg-chart" aria-label="Bar chart: BI-RADS 4 F1 score by method. Image only 0.214, concat and MLP 0.348, one-way cross-attention 0.401, BOCAF 0.523.">
+      <p class="tg-chart-title">BI-RADS 4 F1 on VinDr-Mammo</p>
+      {%- assign bars = "Image only|0.214;Concat + MLP|0.348;Cross-attention|0.401;BOCAF|0.523" | split: ";" -%}
+      <ul>
+        {%- for b in bars -%}{%- assign kv = b | split: "|" -%}{%- assign pct = kv[1] | times: 100 | divided_by: 0.6 | round -%}
+        <li{% if kv[0] == "BOCAF" %} class="hi"{% endif %}><span class="tg-label">{{ kv[0] }}</span><span class="tg-bar"><span style="width: {{ pct }}%"></span></span><span class="tg-val">{{ kv[1] }}</span></li>
+        {%- endfor -%}
+      </ul>
+      <p class="tg-chart-note">Thesis Table 14.2 · axis 0 – 0.6</p>
+    </figure>
+    <div class="tg-body">
+      <p class="tg-kicker">Part III · Multimodal</p>
+      <h3>BI-RADS-aware fusion (BOCAF)</h3>
+      <p class="tg-metric">QWK 0.793 · AUC 0.841</p>
+      <p class="tg-sub">Mammograms + clinical metadata with bidirectional ordinal cross-attention, VinDr-Mammo</p>
+    </div>
+  </article>
+</div>

@@ -10,23 +10,46 @@ body_class: research-page
 
 Most breast imaging models are judged on overlap scores alone, which hides the failures that matter to a radiologist: a lesion clipped away during preprocessing, a boundary that drifts at low contrast, or a BI-RADS prediction that collapses onto the majority class. Our thesis, *Toward Clinically Interpretable Breast Cancer Imaging: A Boundary-Aware Hybrid Framework for Ultrasound Lesion Segmentation and Multimodal Mammographic Classification with BI-RADS-Aware Fusion*, addresses one such failure in each of three stages of the pipeline.
 
-{% include thesis-diagram.html %}
-
 <ol class="stages">
 <li>
 <h3>Pectoral muscle removal that preserves lesions</h3>
 <p>In mediolateral oblique mammograms the pectoral muscle has to be removed before analysis, but aggressive removal can delete lesions near the chest wall. We designed a Lesion-Aware Attention U-Net trained with a composite loss on a hybrid set of manual and confidence-filtered pseudo-labels, and introduced the <strong>Lesion Preservation Rate (LPR)</strong> to measure how much lesion tissue survives segmentation — to our knowledge the first such metric in the pectoral segmentation literature.</p>
 <p class="result">DSC 0.897; mean LPR 97.7% (median 100%) on the 26 test cases where lesion and muscle overlap, against 81.1% for the best classical baseline — a 16.6 percentage-point gain (p &lt; 0.001). Data: CBIS-DDSM, with external validation on VinDr-Mammo.</p>
+<div class="fig-row">{% include figure.html file="thesis/part1-framework" large=true caption="Lesion-Aware Attention U-Net: preprocessing and the attention-gated U-Net that outputs a three-class mask (top), and the composite training loss combining strong labels, pseudo-labels and the lesion safety penalty (bottom). Thesis Fig. 6.1." alt="Diagram of the Lesion-Aware Attention U-Net inference pipeline and training framework" %}{% include figure.html file="thesis/part1-lpr-analysis" large=true caption="Lesion Preservation Rate on the 26 lesion–muscle overlap cases: distribution, comparison with the best classical baseline by pathology, DSC–LPR correlation, and summary statistics. From the thesis, Chapter 7." alt="Four-panel chart of LPR results" %}</div>
 </li>
 <li>
 <h3>Boundary-aware ultrasound lesion segmentation</h3>
 <p>Ultrasound lesions have speckle noise and weak, irregular margins. A hybrid network combines a pretrained residual encoder, a windowed self-attention bottleneck, channel–spatial attention and feature-style randomisation, with a boundary-aware auxiliary head. All five baselines were retrained under the same stratified k-fold protocol, with component ablations and fold-level significance tests.</p>
 <p class="result">Mean Dice 77.28% on BUSI and 82.17% on UDIAT, 2.36 and 3.61 points above the strongest baseline (paired t-test, p &lt; 0.05); 88.61% on BUS-BRA, statistically comparable to the best baseline. Lowest cross-fold variance on all three datasets.</p>
+<div class="fig-row">{% include figure.html file="thesis/part2-architecture" large=true caption="Network architecture: pretrained ResNet-34 encoder, windowed self-attention bottleneck with CBAM, attention-gated decoder, and training-only SDF and deep-supervision heads." alt="Encoder-decoder architecture diagram with attention gates and a windowed self-attention bottleneck" %}{% include figure.html file="thesis/part2-ablation" large=true caption="Component ablation on BUSI: change in Dice when each component is removed. Feature-style randomisation (MixStyle) and CBAM contribute most." alt="Horizontal bar chart of Dice change per removed component" %}</div>
+<div class="table-wrap"><table class="results">
+<caption>Mean Dice (%) ± standard deviation across folds, all methods retrained under the same protocol (thesis Table 10.1). Best per dataset in bold.</caption>
+<thead><tr><th>Method</th><th>BUSI</th><th>UDIAT</th><th>BUS-BRA</th></tr></thead>
+<tbody>
+<tr><td>U-Net</td><td>74.92 ± 3.95</td><td>76.15 ± 3.58</td><td>86.11 ± 1.45</td></tr>
+<tr><td>U-Net++</td><td>72.35 ± 5.28</td><td>78.21 ± 3.66</td><td>88.25 ± 0.55</td></tr>
+<tr><td>Attention U-Net</td><td>73.11 ± 2.60</td><td>76.15 ± 4.79</td><td>87.49 ± 0.39</td></tr>
+<tr><td>DeepLabV3+</td><td>74.57 ± 2.54</td><td>76.32 ± 4.08</td><td><strong>88.74 ± 0.47</strong></td></tr>
+<tr><td>MA-Net</td><td>72.96 ± 2.50</td><td>78.56 ± 3.93</td><td>86.42 ± 0.96</td></tr>
+<tr class="ours"><td>Ours</td><td><strong>77.28 ± 2.43</strong></td><td><strong>82.17 ± 1.48</strong></td><td>88.61 ± 0.16</td></tr>
+</tbody></table></div>
 </li>
 <li>
 <h3>BI-RADS-aware multimodal fusion</h3>
 <p>BI-RADS categories are ordered, and the rarer high-suspicion classes are the ones that matter most. <strong>BOCAF</strong> (Bidirectional Ordinal Cross-Attention Fusion) lets mammogram features and clinical metadata attend to each other, and is trained with a CORAL ordinal loss with class-imbalance weighting and a threshold-separation penalty to prevent recall collapse on minority categories.</p>
 <p class="result">Quadratic weighted kappa 0.793 and macro AUC 0.841 on the official VinDr-Mammo test set, improving on the strongest unimodal and simple-fusion baselines (p &lt; 0.05).</p>
+<div class="table-wrap"><table class="results">
+<caption>Test-set results on VinDr-Mammo (thesis Table 14.1). QWK = quadratic weighted kappa; MAE = mean absolute error in BI-RADS categories; last column = recall on BI-RADS 4 / 5. * p &lt; 0.05 versus the best baseline.</caption>
+<thead><tr><th>Method</th><th>QWK ↑</th><th>Macro AUC ↑</th><th>Accuracy ↑</th><th>MAE ↓</th><th>BR4 / BR5 recall ↑</th></tr></thead>
+<tbody>
+<tr><td>Image only</td><td>0.741</td><td>0.779</td><td>0.694</td><td>0.341</td><td>0.47 / 0.81</td></tr>
+<tr><td>Clinical only</td><td>0.612</td><td>0.703</td><td>0.631</td><td>0.412</td><td>0.31 / 0.62</td></tr>
+<tr><td>Concat + MLP fusion</td><td>0.758</td><td>0.801</td><td>0.711</td><td>0.318</td><td>0.52 / 0.86</td></tr>
+<tr><td>Cross-attention (one-way)</td><td>0.771</td><td>0.814</td><td>0.724</td><td>0.298</td><td>0.58 / 0.90</td></tr>
+<tr><td>BOCAF without prototype attention</td><td>0.779</td><td>0.821</td><td>0.731</td><td>0.288</td><td>0.61 / 0.92</td></tr>
+<tr class="ours"><td>BOCAF</td><td><strong>0.793*</strong></td><td><strong>0.841*</strong></td><td><strong>0.737</strong></td><td><strong>0.279</strong></td><td><strong>0.67 / 0.95</strong></td></tr>
+</tbody></table></div>
+<p class="meta-line">Per-class F1 rises most on the hard middle categories: BI-RADS 2 from 0.000 (image only) to 0.421, and BI-RADS 4 from 0.214 to 0.523 (thesis Table 14.2).</p>
 </li>
 </ol>
 
