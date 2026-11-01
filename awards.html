@@ -1,0 +1,89 @@
+---
+title: Awards & Honours
+lede: Competition results, grants and recognition. Click any certificate or photo to view it full size.
+body_class: wide-page awards-page
+permalink: /awards/
+---
+{% assign aw = site.data.awards %}
+{% assign f = aw.featured %}
+
+<section class="award-highlights" aria-label="Highlights">
+  <div><strong>3rd place</strong><span>IEEE VIP Cup 2025 final, ICIP 2025</span></div>
+  <div><strong>Travel grant</strong><span>IEEE Signal Processing Society, ICIP 2025</span></div>
+  <div><strong>Finalist</strong><span>Datathon, CUET CSE Fest 2025</span></div>
+</section>
+
+<article class="award-feature">
+  <div class="award-feature-text">
+    <p class="award-kicker"><span class="scope">{{ f.scope }}</span>{{ f.date }}</p>
+    <h2>{{ f.title }}</h2>
+    <p class="award-where">{{ f.org }} · {{ f.where }}</p>
+    <p class="award-challenge"><strong>Challenge:</strong> <em>{{ f.challenge }}</em></p>
+    <p>{{ f.system }}</p>
+    <p class="award-role"><strong>My role.</strong> {{ f.my_role }}</p>
+    <dl class="award-team">
+      <dt>Team</dt><dd>{{ f.team }}</dd>
+      <dt>Supervisor</dt><dd>{{ f.supervisor }}</dd>
+      <dt>Mentor</dt><dd>{{ f.mentor }}</dd>
+      <dt>Members</dt><dd>{{ f.members | replace: 'Mohammad Asif Hasan', '<strong>Mohammad Asif Hasan</strong>' }}</dd>
+    </dl>
+    <p class="award-outcomes-head">Research that came out of it</p>
+    <ul class="award-outcomes">
+      {% for o in f.outcomes %}<li><a href="{% if o.url contains '://' %}{{ o.url }}{% else %}{{ o.url | relative_url }}{% endif %}">{{ o.text }}</a></li>{% endfor %}
+    </ul>
+  </div>
+  {% if f.certificate != "" %}
+  <div class="award-cert">
+    {% capture full %}/assets/img/awards/{{ f.certificate }}.jpg{% endcapture %}
+    {% capture thumb %}/assets/img/awards/{{ f.certificate }}-thumb.jpg{% endcapture %}
+    <button type="button" class="photo" data-full="{{ full | relative_url }}" data-caption="{{ f.title }}, {{ f.date }}">
+      <img src="{{ thumb | relative_url }}" alt="IEEE SPS certificate: 2025 Video and Image Processing Cup, Third Prize, presented to team EyeQ, Bangladesh University of Engineering and Technology" loading="lazy" width="560" height="433">
+    </button>
+    <p class="cert-label">Certificate · IEEE Signal Processing Society</p>
+    {% if f.team_photo %}
+    <figure class="award-team-photo">
+      {% capture full %}/assets/img/awards/{{ f.team_photo }}.jpg{% endcapture %}
+      {% capture thumb %}/assets/img/awards/{{ f.team_photo }}-thumb.jpg{% endcapture %}
+      <button type="button" class="photo" data-full="{{ full | relative_url }}" data-caption="{{ f.team }}, IEEE VIP Cup 2025">
+        <img src="{{ thumb | relative_url }}" alt="Team EyeQ: supervisor Shaikh Anowarul Fattah, mentor Anjan Kumar Bagchi, and team members Nahian Tasnim, Khondokar Ashik Shahriar, Fabliha Labiba, Mohammad Asif Hasan and Sudipto Sarkar" loading="lazy" width="960" height="540">
+      </button>
+      <figcaption>{{ f.team }} — supervisor, mentor and the five team members.</figcaption>
+    </figure>
+    {% endif %}
+  </div>
+  {% endif %}
+</article>
+
+{% for sec in aw.sections %}
+<h2 class="award-section">{{ sec.heading }}</h2>
+<div class="award-grid">
+  {% for a in sec.items %}
+  <article class="award-card{% if a.certificate != "" %} has-cert{% endif %}">
+    {% if a.certificate != "" %}
+    {% capture full %}/assets/img/awards/{{ a.certificate }}.jpg{% endcapture %}
+    {% capture thumb %}/assets/img/awards/{{ a.certificate }}-thumb.jpg{% endcapture %}
+    <button type="button" class="photo award-thumb" data-full="{{ full | relative_url }}" data-caption="{{ a.title }}, {{ a.org }}, {{ a.year }}">
+      <img src="{{ thumb | relative_url }}" alt="Certificate: {{ a.title }}, {{ a.org }}" loading="lazy" width="560" height="396">
+    </button>
+    {% endif %}
+    <div class="award-body">
+      <p class="award-kicker"><span class="scope">{{ a.scope }}</span>{{ a.year }}</p>
+      <h3>{{ a.title }}</h3>
+      <p class="award-where">{{ a.org }}</p>
+      {% if a.detail != "" %}<p>{{ a.detail }}</p>{% endif %}
+      {% if a.outcomes %}<p class="pub-links">{% for o in a.outcomes %}<a href="{% if o.url contains '://' %}{{ o.url }}{% else %}{{ o.url | relative_url }}{% endif %}">{{ o.text }}</a>{% endfor %}</p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endfor %}
+
+<dialog class="lightbox" aria-label="Certificate viewer">
+  <img alt="">
+  <p class="lb-caption"></p>
+  <div class="lb-controls">
+    <button type="button" class="lb-prev">Previous</button>
+    <button type="button" class="lb-close">Close</button>
+    <button type="button" class="lb-next">Next</button>
+  </div>
+</dialog>

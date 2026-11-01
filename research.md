@@ -30,24 +30,24 @@ Most breast imaging models are judged on overlap scores alone, which hides the f
 </li>
 </ol>
 
-<p class="tools">Tools: PyTorch, 3D Slicer, SimpleITK, scikit-learn, OpenCV. Datasets: CBIS-DDSM, VinDr-Mammo, BUSI, UDIAT, BUS-BRA. A journal manuscript extending the ultrasound work is in preparation (<a href="{{ '/publications/' | relative_url }}">publications</a>).</p>
+<p class="tools">Tools: PyTorch, 3D Slicer, SimpleITK, scikit-learn, OpenCV. Datasets: CBIS-DDSM, VinDr-Mammo, BUSI, UDIAT, BUS-BRA. A journal manuscript extending the ultrasound work is in preparation (<a href="{{ '/publications/' | relative_url }}">publications</a>). The full thesis (119 pages, defended June 2026) is available on request.</p>
 
 ## Multimodal detection and tracking for aerial platforms
 
 <p class="meta-line">Group of Prof. Shaikh Anowarul Fattah, Department of EEE, BUET, 2025.</p>
 
-Distinguishing drones from birds is hard in smoke, haze and low light, and counter-UAV systems usually have to run on modest hardware. Working with RGB and infrared imagery from the IEEE VIP Cup 2025 challenge, our team developed:
+Distinguishing drones from birds is hard in smoke, haze and low light, and counter-UAV systems usually have to run on modest hardware. The IEEE VIP Cup 2025 challenge, *Infrared–Visual Fusion for Enhanced Drone Detection, Tracking and Payload Identification in Surveillance Videos*, supplied paired RGB and infrared video. Our competition system, **DeepDroneTrack**, chained a lightweight detector, ByteTrack-based tracking tuned for the infrared stream with a direction-of-motion estimate per track, and an RGB + infrared early-fusion classifier for harmful versus normal payloads. Two pieces of it became papers:
 
 - **EGD-YOLO**, a lightweight detector that adds Ghost modules and Efficient Multi-scale Attention (EMA) to YOLOv8n for robust discrimination under adverse conditions. I built the Ghost and EMA modules and the RGB–IR data pipeline, ran the experiments and ablations, and co-wrote the paper ([arXiv:2510.10765](https://arxiv.org/abs/2510.10765)).
-- **A real-time multimodal tracker** that uses modality-aware adaptation and physics-aware filtering to keep identities stable across frames ([IEEE WIECON-ECE 2025](https://ieeexplore.ieee.org/document/11526317)). I built the detection model, ran the tracking experiments and evaluation, and co-wrote the paper.
+- **A real-time multimodal tracker** that uses modality-aware adaptation and physics-aware filtering to keep identities stable across frames ([IEEE WIECON-ECE 2025](https://ieeexplore.ieee.org/document/11526317)). Its four-channel EGD-YOLOv8n fusion detector reached 70.1% mAP, 13.8% above single-modality baselines with 59% fewer parameters, and the full pipeline ran at 97.87 FPS. I built the detection model, ran the tracking experiments and evaluation, and co-wrote the paper.
 
-Our team, EyeQ, placed Second Runner-Up (third place) in the IEEE VIP Cup 2025 final at ICIP 2025 in Anchorage, Alaska. The same concern for on-device efficiency drives [HIVE-R]({{ '/projects/' | relative_url }}), a swarm UAV system whose YOLOv8n detector runs at 185 ms per frame on a Raspberry Pi 4.
+Our team, EyeQ (supervised by Prof. Fattah and mentored by Anjan Kumar Bagchi), placed Second Runner-Up (third place) in the final at ICIP 2025 in Anchorage, Alaska; see [Awards & Honours]({{ '/awards/' | relative_url }}). The same concern for on-device efficiency drives [HIVE-R]({{ '/projects/' | relative_url }}), a swarm UAV system whose YOLOv8n detector runs at 185 ms per frame on a Raspberry Pi 4.
 
 ## Current work
 
 <p class="meta-line">Manuscripts in preparation, 2026, with colleagues at BUET.</p>
 
-- **When the data shifts.** Political memes in Bangladesh mix Bangla, English and Romanised Banglish, and their subjects changed sharply after July 2024. With S. Sarkar, R. Mahmud and M. M. Islam, I am studying why multimodal meme classifiers that look strong on held-out data degrade on memes collected later, and which fixes survive a strict validation-only protocol.
+- **When the data shifts.** Political memes in Bangladesh mix Bangla, English and Romanised Banglish, and their subjects changed sharply after July 2024. Starting from the PoliMemeDecode benchmark released for the CUET Datathon, where my team was a finalist, S. Sarkar, R. Mahmud, M. M. Islam and I are studying why multimodal meme classifiers that look strong on held-out data degrade on memes collected later, and which fixes survive a strict validation-only protocol.
 - **Combining detectors honestly.** A follow-up to the VIP Cup work that profiles and ablates a range of RGB and thermal detectors under a matched protocol, then asks when fusing their outputs actually helps and what it costs in latency on the edge.
 
 ## Earlier work

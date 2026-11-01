@@ -54,7 +54,7 @@ awards:
   - title: "Finalist, Datathon"
     where: "CUET CSE Fest 2025"
     year: 2025
-    detail: "Team Breakpoint. PaddleOCR-based pipeline for classifying memes as political or non-political."
+    detail: "Team Breakpoint. PaddleOCR-based pipeline for classifying memes as political or non-political on the PoliMemeDecode benchmark, which my current meme-detection manuscript builds on."
   - title: "Top 30, NNO Content Writing Hunt Programme"
     where: "Newspaper Olympiad"
     year: 2021

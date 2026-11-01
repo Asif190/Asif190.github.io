@@ -1,0 +1,91 @@
+# Awards & Honours page (/awards/). Every entry here is backed by a certificate or a public record.
+# certificate: base name of an image in assets/img/awards/ (needs NAME.jpg and NAME-thumb.jpg). Leave "" if none.
+# outcomes: optional links shown under the entry.
+
+featured:
+  title: "Third Prize (Second Runner-Up), IEEE SPS Video and Image Processing Cup 2025"
+  org: "IEEE Signal Processing Society"
+  where: "Final held at IEEE ICIP 2025, Anchorage, Alaska, USA"
+  date: "14 September 2025"
+  scope: "International"
+  challenge: "Infrared–Visual Fusion for Enhanced Drone Detection, Tracking and Payload Identification in Surveillance Videos"
+  team: "Team EyeQ, BUET"
+  supervisor: "Prof. Shaikh Anowarul Fattah"
+  mentor: "Anjan Kumar Bagchi"
+  members: "Sudipto Sarkar, Mohammad Asif Hasan, Fabliha Labiba, Nahian Tasnim, Khondokar Ashik Shahriar"
+  system: >-
+    Our system, DeepDroneTrack, has three stages: a lightweight YOLOv8n detector with Ghost modules and
+    EMA attention working on RGB and infrared frames, ByteTrack-based multi-object tracking tuned for the
+    infrared stream with a direction-of-motion estimate for each track, and an RGB + infrared early-fusion
+    classifier that labels each detected drone's payload as harmful or normal.
+  my_role: "I built the team's custom YOLOv8 detector, including the Ghost and EMA modules and the RGB–IR data pipeline, and the drone-payload recognition model."
+  certificate: vip-cup-2025
+  team_photo: team-eyeq          # assets/img/awards/team-eyeq.jpg (+ -thumb.jpg)
+  outcomes:
+    - text: "EGD-YOLO preprint (arXiv:2510.10765)"
+      url: "https://arxiv.org/abs/2510.10765"
+    - text: "Real-time multimodal tracking paper, IEEE WIECON-ECE 2025"
+      url: "https://ieeexplore.ieee.org/document/11526317"
+    - text: "Follow-up manuscript on weighted fusion of RGB and thermal detectors (in preparation)"
+      url: "/publications/"
+  also: "ICIP 2025 Travel Grant (see below)"
+
+sections:
+  - heading: "Grants"
+    items:
+      - title: "IEEE ICIP 2025 Travel Grant"
+        org: "IEEE Signal Processing Society"
+        year: 2025
+        scope: "International"
+        detail: "Awarded to attend the IEEE VIP Cup 2025 final at ICIP 2025, Anchorage, Alaska."
+        certificate: ""
+
+  - heading: "Competitions"
+    items:
+      - title: "Finalist, Datathon — CUET CSE Fest 2025"
+        org: "Department of CSE, Chittagong University of Engineering and Technology (CUET)"
+        year: 2025
+        scope: "National"
+        detail: "Team Breakpoint. Built a PaddleOCR-based pipeline to classify memes as political or non-political on the PoliMemeDecode benchmark released for the Datathon. That benchmark is the starting point of my current manuscript on temporal shift in Bangla political meme detection."
+        certificate: cuet-datathon-2025
+        outcomes:
+          - text: "Manuscript in preparation"
+            url: "/publications/"
+      - title: "Participant, NASA International Space Apps Challenge 2025"
+        org: "NASA"
+        year: 2025
+        scope: "International"
+        detail: "Team Beyond Kepler. Built AstroVeritas, a machine-learning pipeline that vets exoplanet transit candidates from TESS light curves, served as a web app."
+        certificate: ""
+        outcomes:
+          - text: "Code"
+            url: "https://github.com/Asif190/Team-Beyond-Kepler-NASA-space-app-challenge-2025-"
+          - text: "Web app"
+            url: "https://astroveritas.vercel.app/"
+
+  - heading: "Leadership recognition"
+    items:
+      - title: "Certificate of Appreciation, Vice President, 10th Executive Committee"
+        org: "BUET Robotics Society"
+        year: "2025 – 2026"
+        scope: "University"
+        detail: "For contribution as Vice President (Mar 2025 – Jul 2026), signed by the society's moderator, Prof. Shaikh Anowarul Fattah. During this term I led an introductory robotics and Arduino workshop for undergraduates."
+        certificate: brs-vice-president
+        outcomes:
+          - text: "Workshop announcement"
+            url: "https://www.facebook.com/share/p/16tALpWmbn/"
+
+  - heading: "Earlier honours"
+    items:
+      - title: "Top 30, NNO Content Writing Hunt Programme"
+        org: "Newspaper Olympiad (NNO)"
+        year: 2021
+        scope: "National"
+        detail: "Certificate of Appreciation. I then served as the Olympiad's Content Lead (Jul 2021 – May 2022)."
+        certificate: nno-content-writing-2021
+      - title: "2nd Position, Divisional Science Fair"
+        org: "Chattogram Division"
+        year: 2017
+        scope: "Regional"
+        detail: ""
+        certificate: ""
