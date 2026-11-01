@@ -67,3 +67,4 @@ exclude:
   - vendor
   - .github
   - "Important Resources"
+  - "cv extra info"
